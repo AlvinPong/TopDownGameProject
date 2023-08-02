@@ -11,6 +11,9 @@ public class WeaponHandler : MonoBehaviour
     
     protected bool _tryShoot = false;
 
+    //public int Ammo = 12;
+    //public int maxAmmo = 120;
+
     protected Movement _movement;
         // Start is called before the first frame update
     void Start()
@@ -39,6 +42,18 @@ public class WeaponHandler : MonoBehaviour
             _tryShoot = true;
         if (Input.GetButtonUp("Fire1"))
             _tryShoot = false;
+
+        //reload
+        //if (Input.GetKeyUp(KeyCode.R))
+        //{
+        //    int reload = 0;
+        //    for (int i = 0; Ammo <= 12; i++)
+        //    {
+        //        Ammo += 1;
+        //        reload++;
+        //    }
+        //    maxAmmo = maxAmmo - reload;
+        //}
     }
     
     protected virtual void  HandleWeapon()
@@ -64,6 +79,15 @@ public class WeaponHandler : MonoBehaviour
         
         if (_tryShoot)
             CurrentWeapon.Shoot();
+
+        //if (_tryShoot)
+        //{
+        //    if (Ammo > 0)
+        //    {
+        //        CurrentWeapon.Shoot();
+        //        Ammo--;
+        //    }
+        //}
     }
 
     public void EquipWeapon(Weapon weapon)
@@ -74,6 +98,8 @@ public class WeaponHandler : MonoBehaviour
     }
     protected void SwitchWeapon()
     {
+        // need to switch to arrays for individual weapon
+        // need at least array size of 6
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             if (CurrentWeapon.isActiveAndEnabled)
