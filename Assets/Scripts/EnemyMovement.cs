@@ -21,7 +21,6 @@ public class EnemyMovement : MonoBehaviour
     private void Update()
     {
         HandleMovement();
-        //HandleFlip();
     }
     protected void HandleMovement()
     {
@@ -38,18 +37,5 @@ public class EnemyMovement : MonoBehaviour
         {
             _flipAnim = true;
         }
-    }
-    //protected void HandleFlip()
-    //{
-    //    if (_movingDirection.x == 0)
-    //        return;
-    //    if (_movingDirection.x > 0)
-    //    {
-    //        _flipAnim = false;
-    //    }
-    //    if (_movingDirection.x < 0)
-    //    {
-    //        _flipAnim = true;
-    //    }
-    //}
+    }    
 }

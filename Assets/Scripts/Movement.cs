@@ -116,8 +116,7 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         HandleMovement();
-        HandleAnim();
-        HandleFlip();
+        HandleAnim();        
     }
     protected virtual void HandleInput()
     {
@@ -141,72 +140,35 @@ public class Movement : MonoBehaviour
         {
             _isWalking = true;
         }
-    }
-    protected virtual void HandleFlip()
-    {
-        //if (_inputDirection.x == 0) { return; }
-        //if (_inputDirection.x > 0)
-        //{
-        //    FlipAnim = false;
-        //}
-        //else if (_inputDirection.x < 0)
-        //{
-        //    FlipAnim = true;
-        //}
-    }
-
+    }   
     protected virtual void CheckDirection()
-    {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 playerPos = transform.position;
-        Vector2 Direction = mousePos - playerPos;
-        Direction = Direction.normalized;
-
-        var angle = Mathf.Atan2(Direction.x, Direction.y) * Mathf.Rad2Deg;
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            //Debug.Log(Direction.x);
-            //Debug.Log(Direction.y);
-
-            Debug.DrawRay(playerPos, Direction, Color.red, 1f);
-
-            //Debug.Log(angle);
-        }
-        //transform.up = Direction;
-
-        //angle that is facing up
-        if (-45 < angle && angle <= 45)
+    {        
+        if (Input.GetKeyDown(KeyCode.I)) //facing up
         {
             _isFacingUp = true;
-        }
-        else
-        {
-            _isFacingUp = false;
-        }
-        if (135 < angle || angle <= -135)
-        {
-            _isFacingDown = true;
-        }
-        else
-        {
             _isFacingDown = false;
-        }
-        if ((45 < angle && angle <= 135) || (-135 < angle && angle <= -45))
-        {
-            _isFacingSide = true;
-        }
-        else
-        {
             _isFacingSide = false;
         }
-        if (-135 < angle && angle <= -45)
+        if (Input.GetKeyDown(KeyCode.K)) //facing down
+        {
+            _isFacingUp = false;
+            _isFacingDown = true;
+            _isFacingSide = false;
+        }
+        if (Input.GetKeyDown(KeyCode.J)) //facing left
         {
             _flipAnim = true;
+            _isFacingUp = false;
+            _isFacingDown = false;
+            _isFacingSide = true;
         }
-        else
+        if (Input.GetKeyDown(KeyCode.L)) //facing right
         {
             _flipAnim = false;
+            _isFacingUp = false;
+            _isFacingDown = false;
+            _isFacingSide = true;
         }
+
     }
 }
