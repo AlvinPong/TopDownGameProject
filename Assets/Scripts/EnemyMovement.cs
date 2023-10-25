@@ -14,9 +14,13 @@ public class EnemyMovement : MonoBehaviour
         set { _flipAnim = value; }
     }
     protected bool _flipAnim;
+    private Health _health;
+    public PhysicsMaterial2D Friction;
+
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _health = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
     private void Update()
     {
@@ -24,11 +28,14 @@ public class EnemyMovement : MonoBehaviour
     }
     protected void HandleMovement()
     {
+        if (_health.CurrentHealth <= 0) return;
         _player = GameObject.FindGameObjectWithTag("Player").transform;
+        
         Vector2 target = new Vector2(_player.position.x, _player.position.y);
         Vector2 newPos = Vector2.MoveTowards(_rigidbody.position, target, Acceleration * Time.fixedDeltaTime);
         _rigidbody.MovePosition(newPos);
         _movingDirection = newPos;
+        _rigidbody.sharedMaterial = Friction;
         if (target.x > transform.position.x)
         {
             _flipAnim = false;

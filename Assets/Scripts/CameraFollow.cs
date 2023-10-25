@@ -10,10 +10,10 @@ public class CameraFollow : MonoBehaviour
     protected float targetXPos = 0f;
     protected float targetYPos = 0f;
 
-    protected float MaxPosX = 12f;
-    protected float MaxPosY = 5f;
-    protected float MinPosX = -12f;
-    protected float MinPosY = -5f;
+    public float MaxPosX = 12f;
+    public float MaxPosY = 5f;
+    public float MinPosX = -12f;
+    public float MinPosY = -5f;
 
     // Start is called before the first frame update
     void Start()

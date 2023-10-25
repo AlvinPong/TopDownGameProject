@@ -143,26 +143,26 @@ public class Movement : MonoBehaviour
     }   
     protected virtual void CheckDirection()
     {        
-        if (Input.GetKeyDown(KeyCode.I)) //facing up
+        if (Input.GetKeyDown(KeyCode.UpArrow)) //facing up
         {
             _isFacingUp = true;
             _isFacingDown = false;
             _isFacingSide = false;
         }
-        if (Input.GetKeyDown(KeyCode.K)) //facing down
+        if (Input.GetKeyDown(KeyCode.DownArrow)) //facing down
         {
             _isFacingUp = false;
             _isFacingDown = true;
             _isFacingSide = false;
         }
-        if (Input.GetKeyDown(KeyCode.J)) //facing left
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) //facing left
         {
             _flipAnim = true;
             _isFacingUp = false;
             _isFacingDown = false;
             _isFacingSide = true;
         }
-        if (Input.GetKeyDown(KeyCode.L)) //facing right
+        if (Input.GetKeyDown(KeyCode.RightArrow)) //facing right
         {
             _flipAnim = false;
             _isFacingUp = false;
