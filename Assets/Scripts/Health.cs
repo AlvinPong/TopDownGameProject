@@ -10,7 +10,8 @@ public class Health : MonoBehaviour
 
     public delegate void ResetEvent();
     public ResetEvent OnHitReset;
-
+    public ResetEvent OnReset;
+     
     public bool IsDead = false;
     //public
     public float CurrentHealth
@@ -22,12 +23,13 @@ public class Health : MonoBehaviour
     public bool _canDamage = true;
 
     public Cooldown Invulnerable;
-    
+    public Cooldown Stun;
     public float _currentHealth = 10f;
 
     private void Update()
     {
         ResetInvulnerble();
+        ResetStun();
     }
     private void ResetInvulnerble()
     {
@@ -36,7 +38,13 @@ public class Health : MonoBehaviour
         if (Invulnerable.IsOnCooldown && _canDamage == false)
             return;
         _canDamage = true;
+        
         OnHitReset?.Invoke();
+    }
+    private void ResetStun()
+    {
+        if (Stun.IsOnCooldown) return;
+        OnReset?.Invoke();
     }
     public void Damage(float damageAmount, GameObject source)
     {
@@ -49,6 +57,7 @@ public class Health : MonoBehaviour
         }
 
         Invulnerable.StartCooldown();
+        Stun.StartCooldown();
         _canDamage = false;
 
         OnHit?.Invoke(source);

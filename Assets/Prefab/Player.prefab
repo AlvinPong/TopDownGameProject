@@ -249,6 +249,9 @@ MonoBehaviour:
   Invulnerable:
     Duration: 1
     CurrentProgress: 0
+  Stun:
+    Duration: 0.1
+    CurrentProgress: 0
   _currentHealth: 10
 --- !u!1 &6197587327058355379
 GameObject:

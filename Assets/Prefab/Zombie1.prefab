@@ -246,8 +246,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc2cf655d9513d4fa89cda37ca48f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 1
+  Acceleration: 3
   Friction: {fileID: 6200000, guid: 2ee90e2442ae2dc47baf68a52f446b83, type: 2}
+  Stunned:
+    Duration: 1
+    CurrentProgress: 0
+  IsStunned: 0
+  DamageForce: 3
 --- !u!114 &6173842965744391573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +270,9 @@ MonoBehaviour:
   _canDamage: 1
   Invulnerable:
     Duration: 0.01
+    CurrentProgress: 0
+  Stun:
+    Duration: 0.5
     CurrentProgress: 0
   _currentHealth: 6
 --- !u!114 &6173842965744391572

@@ -62,6 +62,12 @@ public class Projectile : MonoBehaviour
             }
         }
 
+        EnemyMovement _enemy = col.gameObject.GetComponent<EnemyMovement>();
+        if(_enemy != null)
+        {
+            _enemy.IsStunned = true;
+        }
+
         Die();
     }
 }

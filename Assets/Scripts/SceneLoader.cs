@@ -24,4 +24,9 @@ public class SceneLoader : MonoBehaviour
         if (CurrentScene == "") return;
         SceneManager.LoadScene(CurrentScene);
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Quitting Game");
+    }
 }
