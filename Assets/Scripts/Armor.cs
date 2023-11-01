@@ -20,8 +20,11 @@ public class Armor : MonoBehaviour
     }
     public void ArmorLoss(float value)
     {
+        if (CurrentArmor <= 0) return;
         CurrentArmor -= value;
-
-        if (CurrentArmor <= 0) { }
+        if (_armorBar != null)
+        {
+            _armorBar.SetArmor(CurrentArmor / 10);
+        }
     }
 }

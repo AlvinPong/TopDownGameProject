@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthBarUI : MonoBehaviour
 {
-    public float AnimationSpeed = 2.0f;
+    public float AnimationSpeed = 1.0f;
 
     public Image HealthBar;
 

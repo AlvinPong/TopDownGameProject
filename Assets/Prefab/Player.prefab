@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 1242604370}
   - component: {fileID: 1242604374}
   - component: {fileID: 1242604382}
+  - component: {fileID: 1618892105}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -253,6 +254,19 @@ MonoBehaviour:
     Duration: 0.1
     CurrentProgress: 0
   _currentHealth: 10
+--- !u!114 &1618892105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4487504353108668524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5843d0cb69759054a97b0758d9ab8cf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentArmor: 10
 --- !u!1 &6197587327058355379
 GameObject:
   m_ObjectHideFlags: 0
