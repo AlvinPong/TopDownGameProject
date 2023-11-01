@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc2cf655d9513d4fa89cda37ca48f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 3
+  Acceleration: 1
   Friction: {fileID: 6200000, guid: 2ee90e2442ae2dc47baf68a52f446b83, type: 2}
   Stunned:
     Duration: 1

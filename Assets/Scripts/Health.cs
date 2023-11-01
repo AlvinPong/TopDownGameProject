@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -26,6 +27,15 @@ public class Health : MonoBehaviour
     public Cooldown Stun;
     public float _currentHealth = 10f;
 
+    private HealthBarUI _healthBar;
+    private Armor _armor;
+
+    private void Start()
+    {
+        if (!gameObject.CompareTag("Player")) return;
+        _armor = GetComponent<Armor>();
+        _healthBar = GameObject.Find("HealthBarUI").GetComponent<HealthBarUI>();
+    }
     private void Update()
     {
         ResetInvulnerble();
@@ -48,9 +58,14 @@ public class Health : MonoBehaviour
     }
     public void Damage(float damageAmount, GameObject source)
     {
-        if (!_canDamage) 
-            return;
+        if (!_canDamage) return;
+
+        
         _currentHealth -= damageAmount;
+        if (_healthBar != null)
+        {
+            _healthBar.SetHealth(_currentHealth / 10);
+        }
         if (_currentHealth <= 0)
         {
             Die();
