@@ -19,14 +19,14 @@ public class EnemyHealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Slider.transform.position = Camera.main.WorldToScreenPoint(transform.position + Offset);
+        Slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + Offset);
     }
     public void SetHealth(float health, float MaxHealth)
     {
         Slider.gameObject.SetActive(health < MaxHealth);
         Slider.value = health;
         Slider.maxValue = MaxHealth;
-        Debug.Log("Health is set");
+        
         Slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low, High, Slider.normalizedValue);
     }
 }

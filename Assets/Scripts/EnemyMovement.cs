@@ -16,7 +16,6 @@ public class EnemyMovement : MonoBehaviour
     }
     protected bool _flipAnim;
     private Health _health;
-    public PhysicsMaterial2D Friction;
 
     public Cooldown Stunned;
     public bool IsStunned = false;
@@ -65,7 +64,7 @@ public class EnemyMovement : MonoBehaviour
         Vector2 newPos = Vector2.MoveTowards(_rigidbody.position, target, Acceleration * Time.fixedDeltaTime);
         _rigidbody.MovePosition(newPos);
         _movingDirection = newPos;
-        _rigidbody.sharedMaterial = Friction;
+        
         if (target.x > transform.position.x)
         {
             _flipAnim = false;
