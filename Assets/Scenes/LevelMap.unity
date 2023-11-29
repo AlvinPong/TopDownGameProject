@@ -1904,6 +1904,10 @@ PrefabInstance:
       propertyPath: CurrentWeapon
       value: 
       objectReference: {fileID: 1399074637}
+    - target: {fileID: 1242604382, guid: 7f8c94a88ecd710468187d148ab1b0f4, type: 3}
+      propertyPath: DeathParticles
+      value: 
+      objectReference: {fileID: 7936932871254652390, guid: 8a9c83299d3675549883c66a57952a8e, type: 3}
     - target: {fileID: 4487504353108668515, guid: 7f8c94a88ecd710468187d148ab1b0f4, type: 3}
       propertyPath: m_RootOrder
       value: 2
