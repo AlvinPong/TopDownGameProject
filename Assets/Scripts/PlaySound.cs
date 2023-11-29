@@ -51,6 +51,6 @@ public class PlaySound : MonoBehaviour
         {
             return;
         }
-        soundManager.Play("Firing sound");
+        soundManager.Play("Firing Sound");
     }
 }

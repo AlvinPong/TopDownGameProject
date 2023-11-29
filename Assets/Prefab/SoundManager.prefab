@@ -76,7 +76,7 @@ MonoBehaviour:
     pitch: 1.55
     source: {fileID: 0}
   - name: Firing Sound
-    clip: {fileID: 8300000, guid: 676c24a6725ec3b4783a219a19d9a31b, type: 3}
+    clip: {fileID: 8300000, guid: 756a3a1b3738ad440b1e5f3c7c950b26, type: 3}
     volume: 0.25
     pitch: 1.55
     source: {fileID: 0}
