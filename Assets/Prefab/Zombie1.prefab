@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDead: 0
-  DeathParticles: {fileID: 0}
+  DeathParticles: {fileID: 7936932871254652390, guid: 8a9c83299d3675549883c66a57952a8e, type: 3}
   Coin: {fileID: 5937418727340989042, guid: 6cd3685a2be6f0a4ca66526e8d982ca3, type: 3}
   _canDamage: 1
   Invulnerable:
