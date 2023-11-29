@@ -667,7 +667,7 @@ MonoBehaviour:
   DeathParticles: {fileID: 0}
   _canDamage: 1
   Invulnerable:
-    Duration: 0.01
+    Duration: 0
     CurrentProgress: 0
   Stun:
     Duration: 0.5

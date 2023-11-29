@@ -5,17 +5,25 @@ using UnityEngine;
 public class Bombs : MonoBehaviour
 {
     public float Damage = 10f;
-    public float Speed = 10f;
+    public float XSpeed = 10f;
+    public float YSpeed = 10f;
     
     public LayerMask TargetLayerMask;
 
     public Cooldown LifeTime;
 
+    public float Timer = 5f;
+
     public GameObject Trigger;
+
+    private Rigidbody2D _rigidbody;
     // Start is called before the first frame update
     void Start()
     {
         Trigger.SetActive(false);
+        LifeTime.StartCooldown();
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody.AddRelativeForce(new Vector2(XSpeed, YSpeed));
     }
 
     // Update is called once per frame
@@ -26,16 +34,13 @@ public class Bombs : MonoBehaviour
         else
         {
             Explode();
+            Invoke("Die", Timer);
         }
     }
     private void Explode()
     {
+        _rigidbody.velocity = Vector3.zero;
         Trigger.SetActive(true);
-        Invoke("Vanish", 1.5f);
-    }
-    private void Vanish()
-    {
-        Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -60,5 +65,9 @@ public class Bombs : MonoBehaviour
         {
             targetHealth.Damage(Damage, gameObject);
         }
+    }
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 }

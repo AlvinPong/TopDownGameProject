@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ThrowBombs : MonoBehaviour
@@ -12,6 +13,8 @@ public class ThrowBombs : MonoBehaviour
     protected float Amount = 5;
 
     protected Movement _movement;
+
+    public TMP_Text BombAmount;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class ThrowBombs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        BombAmount.text = Amount.ToString();
         HandleInput();
         if (Interval.CurrentProgress != Cooldown.Progress.Finished)
             return;
@@ -28,9 +32,12 @@ public class ThrowBombs : MonoBehaviour
     }
     private void HandleInput()
     {
-        if (Input.GetKeyUp(KeyCode.F))
+        if (Input.GetKeyUp(KeyCode.G))
         {
-            ThrowExplosive();
+            if (Amount > 0)
+            {
+                ThrowExplosive();
+            }
         }
     }
     private void ThrowExplosive()
@@ -40,8 +47,28 @@ public class ThrowBombs : MonoBehaviour
 
         GameObject explosive = GameObject.Instantiate(Explosive, SpawnPos.position, SpawnPos.rotation);
 
-        //if (_isFlip)
-        //    explosive.GetComponent<Projectile>().Speed *= -1;
+        Amount -= 1;
+
+        if (_movement.IsFacingUp)
+        {
+            explosive.GetComponent<Bombs>().XSpeed *= 0;
+            explosive.GetComponent<Bombs>().YSpeed *= 1;
+        }
+        if (_movement.IsFacingDown)
+        {
+            explosive.GetComponent<Bombs>().XSpeed *= 0;
+            explosive.GetComponent<Bombs>().YSpeed *= -1;
+        }
+        if(_movement.IsFacingSide && _movement.FlipAnim)
+        {
+            explosive.GetComponent<Bombs>().XSpeed *= -1;
+            explosive.GetComponent<Bombs>().YSpeed *= 0;
+        }
+        if(_movement.IsFacingSide && !_movement.FlipAnim)
+        {
+            explosive.GetComponent<Bombs>().XSpeed *= 1;
+            explosive.GetComponent<Bombs>().YSpeed *= 0;
+        }
 
         Interval.StartCooldown();
     }
