@@ -32,8 +32,10 @@ public class Health : MonoBehaviour
     private HealthBarUI _healthBar;
     private Armor _armor;
     public EnemyHealthBar _enemyHealth;
+    private PlaySound _playsound;
     private void Start()
     {
+        _playsound = GetComponent<PlaySound>();
         if (gameObject.CompareTag("Player"))
         {
             _armor = GetComponent<Armor>();
@@ -46,6 +48,12 @@ public class Health : MonoBehaviour
     }
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            Damage(3f, this.gameObject );
+        }
+
+        Heartbeat();
         ResetInvulnerble();
         ResetStun();
     }
@@ -111,4 +119,20 @@ public class Health : MonoBehaviour
     {
         IsDead = true;
     }
+    public void Heartbeat()
+    {
+        if (!gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+
+        if(_currentHealth <= 3)
+        {
+            Debug.Log("health low, tyr play sound");
+
+            _playsound.LowHealth();
+        }
+        
+    }
 }
+
