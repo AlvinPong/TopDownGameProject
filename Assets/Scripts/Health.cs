@@ -21,6 +21,7 @@ public class Health : MonoBehaviour
         get { return _currentHealth; }
     }
     public GameObject DeathParticles;
+    public GameObject Coin;
 
     public bool _canDamage = true;
 
@@ -103,8 +104,13 @@ public class Health : MonoBehaviour
         {
             GameObject.Instantiate(DeathParticles, transform.position, transform.rotation);
         }
+        if (Coin != null)
+        {
+            GameObject.Instantiate(Coin, transform.position, transform.rotation);
+        }
         Destroy(this.gameObject);
         Dead();
+        
     }
 
     public void Dead()
