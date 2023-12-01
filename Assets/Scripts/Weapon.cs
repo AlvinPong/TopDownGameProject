@@ -8,18 +8,14 @@ public class Weapon : MonoBehaviour
     public GameObject Projectile;
     public Transform SpawnPos;
     public Cooldown ShootInterval;
-    private PlaySound _playsound;
+
     public bool IsFlip
     {
         set { _isFlip = value; }
     }
 
     public bool _isFlip = false;
-
-    void Start()
-    {
-        
-    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -33,13 +29,10 @@ public class Weapon : MonoBehaviour
             return;
 
         GameObject bullet = GameObject.Instantiate(Projectile, SpawnPos.position, SpawnPos.rotation);
-        
 
         if (_isFlip)
             bullet.GetComponent<Projectile>().Speed *= -1;
 
         ShootInterval.StartCooldown();
-        
     }
-    
 }
