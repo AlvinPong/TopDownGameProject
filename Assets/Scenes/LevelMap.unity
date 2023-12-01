@@ -880,6 +880,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4387183512449038085, guid: 622cfd15748dc1846bae85359ba10371, type: 3}
+      propertyPath: sounds.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387183512449038085, guid: 622cfd15748dc1846bae85359ba10371, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d8cfe64752b0f0844bdaa1a44de7e811, type: 3}
+    - target: {fileID: 4387183512449038085, guid: 622cfd15748dc1846bae85359ba10371, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: Low health
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387183512449038085, guid: 622cfd15748dc1846bae85359ba10371, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 676c24a6725ec3b4783a219a19d9a31b, type: 3}
+    - target: {fileID: 4387183512449038085, guid: 622cfd15748dc1846bae85359ba10371, type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: Firing sounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387183512449038085, guid: 622cfd15748dc1846bae85359ba10371, type: 3}
+      propertyPath: sounds.Array.data[6].pitch
+      value: 1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387183512449038085, guid: 622cfd15748dc1846bae85359ba10371, type: 3}
+      propertyPath: sounds.Array.data[7].pitch
+      value: 1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387183512449038085, guid: 622cfd15748dc1846bae85359ba10371, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387183512449038085, guid: 622cfd15748dc1846bae85359ba10371, type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4387183512449038086, guid: 622cfd15748dc1846bae85359ba10371, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -891,18 +927,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4487504353108668524, guid: 7f8c94a88ecd710468187d148ab1b0f4, type: 3}
   m_PrefabInstance: {fileID: 834486058}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &327938628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327938620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3de32a63bb95b648af9fa413b0b2b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &397065255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1960,7 +1984,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 834486060, guid: 7f8c94a88ecd710468187d148ab1b0f4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7f8c94a88ecd710468187d148ab1b0f4, type: 3}
 --- !u!1 &870695675
 GameObject:

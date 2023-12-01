@@ -645,7 +645,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Acceleration: 2
-  Friction: {fileID: 6200000, guid: 2ee90e2442ae2dc47baf68a52f446b83, type: 2}
   Stunned:
     Duration: 1
     CurrentProgress: 0
@@ -665,7 +664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDead: 0
   DeathParticles: {fileID: 7936932871254652390, guid: 8a9c83299d3675549883c66a57952a8e, type: 3}
-  Coin: {fileID: 5937418727340989042, guid: 6cd3685a2be6f0a4ca66526e8d982ca3, type: 3}
+  Coin: {fileID: 0}
   _canDamage: 1
   Invulnerable:
     Duration: 0
