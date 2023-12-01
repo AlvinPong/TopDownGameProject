@@ -10,7 +10,7 @@ public class ThrowBombs : MonoBehaviour
 
     public Cooldown Interval;
 
-    protected float Amount = 5;
+    public float Amount = 5;
 
     protected Movement _movement;
 
