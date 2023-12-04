@@ -11,6 +11,7 @@ public class ThrowBombs : MonoBehaviour
     public Cooldown Interval;
 
     public float Amount = 5;
+    public float MaxAmount = 5;
 
     protected Movement _movement;
 
@@ -19,6 +20,7 @@ public class ThrowBombs : MonoBehaviour
     void Start()
     {
         _movement = GetComponent<Movement>();
+        Amount = MaxAmount;
     }
 
     // Update is called once per frame

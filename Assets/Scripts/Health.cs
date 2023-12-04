@@ -35,10 +35,12 @@ public class Health : MonoBehaviour
     public EnemyHealthBar _enemyHealth;
     private void Start()
     {
+        _currentHealth = MaxHealth;
         if (gameObject.CompareTag("Player"))
         {
             _armor = GetComponent<Armor>();
             _healthBar = GameObject.Find("HealthBarUI").GetComponent<HealthBarUI>();
+            
         }       
         if (_enemyHealth != null)
         {
@@ -49,6 +51,10 @@ public class Health : MonoBehaviour
     {
         ResetInvulnerble();
         ResetStun();
+        if (_healthBar != null)
+        {
+            _healthBar.SetHealth(_currentHealth / 10);
+        }
     }
     private void ResetInvulnerble()
     {

@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2620720639905195297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2882750249680080974}
+  m_Layer: 0
+  m_Name: DspawnPos1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2882750249680080974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2620720639905195297}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7, y: 0.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3725832526749631562}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2937154010723443277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2741260805858075574}
+  m_Layer: 0
+  m_Name: DspawnPos2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2741260805858075574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937154010723443277}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3725832526749631562}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3725832526139436941
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +158,7 @@ GameObject:
   - component: {fileID: 3725832526749631565}
   m_Layer: 0
   m_Name: Rifle
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +177,8 @@ Transform:
   m_Children:
   - {fileID: 3725832526139436938}
   - {fileID: 3725832527339077339}
+  - {fileID: 2882750249680080974}
+  - {fileID: 2741260805858075574}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -132,9 +196,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 569486050755791780, guid: a64be5e9867c62f448a40d6b0a2a0e38, type: 3}
   SpawnPos: {fileID: 3725832527339077339}
+  SpawnPos1: {fileID: 2882750249680080974}
+  SpawnPos2: {fileID: 2741260805858075574}
   ShootInterval:
     Duration: 0.3
     CurrentProgress: 0
+  BulletType:
+  - {fileID: 569486050755791780, guid: a64be5e9867c62f448a40d6b0a2a0e38, type: 3}
+  - {fileID: 2465183500015919464, guid: 035ad0f32fb508d4aa1dc48635ea8798, type: 3}
+  - {fileID: 8197631226526017782, guid: 8f8801764f822f64f964762366598a5a, type: 3}
+  - {fileID: 3093474860144390684, guid: 49aac190ea71346458cac71eecdb0288, type: 3}
+  - {fileID: 1807020376922347771, guid: 8fc4895afadc5234a8612bbedc557210, type: 3}
+  BulletIndex: 0
   _isFlip: 0
 --- !u!1 &3725832527339077338
 GameObject:
