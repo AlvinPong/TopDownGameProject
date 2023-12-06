@@ -37,7 +37,10 @@ public class ShopUpgrades : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        NotEnough.gameObject.SetActive(false);
+        if (NotEnough != null)
+        {
+            NotEnough.gameObject.SetActive(false);
+        }
 
         for (int i = 0; i < HealthUpgrades.Length; i++)
         {
@@ -61,7 +64,10 @@ public class ShopUpgrades : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TotalAmount.text = BuyAmount.ToString();
+        if (TotalAmount != null)
+        {
+            TotalAmount.text = BuyAmount.ToString();
+        }
     }
     public void AddHealth()
     {

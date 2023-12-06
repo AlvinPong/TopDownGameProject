@@ -19,6 +19,7 @@ public class ThrowBombs : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BombAmount = GameObject.Find("BombUI").GetComponent<TMP_Text>();
         _movement = GetComponent<Movement>();
         Amount = MaxAmount;
     }
@@ -26,7 +27,10 @@ public class ThrowBombs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BombAmount.text = Amount.ToString();
+        if (BombAmount != null)
+        {
+            BombAmount.text = Amount.ToString();
+        }
         HandleInput();
         if (Interval.CurrentProgress != Cooldown.Progress.Finished)
             return;
