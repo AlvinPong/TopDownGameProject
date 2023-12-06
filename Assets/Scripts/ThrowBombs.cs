@@ -11,6 +11,7 @@ public class ThrowBombs : MonoBehaviour
     public Cooldown Interval;
 
     public float Amount = 5;
+    public float MaxAmount = 5;
 
     protected Movement _movement;
 
@@ -18,13 +19,18 @@ public class ThrowBombs : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BombAmount = GameObject.Find("BombUI").GetComponent<TMP_Text>();
         _movement = GetComponent<Movement>();
+        Amount = MaxAmount;
     }
 
     // Update is called once per frame
     void Update()
     {
-        BombAmount.text = Amount.ToString();
+        if (BombAmount != null)
+        {
+            BombAmount.text = Amount.ToString();
+        }
         HandleInput();
         if (Interval.CurrentProgress != Cooldown.Progress.Finished)
             return;
@@ -32,7 +38,7 @@ public class ThrowBombs : MonoBehaviour
     }
     private void HandleInput()
     {
-        if (Input.GetKeyUp(KeyCode.G))
+        if (Input.GetKeyUp(KeyCode.Q))
         {
             if (Amount > 0)
             {

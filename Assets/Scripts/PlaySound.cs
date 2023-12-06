@@ -6,6 +6,8 @@ public class PlaySound : MonoBehaviour
 {
     SoundManager soundManager;
 
+    public bool canShieldsound;
+
     protected void Start()
     {
         soundManager = FindObjectOfType<SoundManager>();
@@ -52,5 +54,36 @@ public class PlaySound : MonoBehaviour
             return;
         }
         soundManager.Play("Firing sound");
+    }
+    public void ShieldBreaking()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+        if (!canShieldsound)
+            return;
+
+        soundManager.Play("Shield breaking");
+    }
+    public void ZombieMoans()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+        soundManager.Play("Zombies moan");
+    }
+    public void PlayerMoan()
+    {
+        if (soundManager == null)
+        {
+            return;           
+        }
+
+        
+        soundManager.Play("Player hurt");
     }
 }

@@ -99,6 +99,9 @@ public class Health : MonoBehaviour
             Die();
         }
 
+        ZombieHurt();
+        PlayerHurt();
+
         Invulnerable.StartCooldown();
         Stun.StartCooldown();
         _canDamage = false;
@@ -139,6 +142,26 @@ public class Health : MonoBehaviour
             _playsound.LowHealth();
         }
         
+    }
+    public void ZombieHurt()
+    {
+        if (!gameObject.CompareTag("Enemy"))
+        {
+            return;
+        }
+
+        _playsound.ZombieMoans();
+
+    }
+    public void PlayerHurt()
+    {
+        if (!gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+
+        _playsound.PlayerMoan();
+
     }
 }
 
