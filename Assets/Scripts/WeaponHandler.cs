@@ -13,6 +13,8 @@ public class WeaponHandler : MonoBehaviour
     protected bool _tryShoot = false;
    
     protected Movement _movement;
+
+    public bool Upgraded = false;
         // Start is called before the first frame update
     void Start()
     {
@@ -118,7 +120,9 @@ public class WeaponHandler : MonoBehaviour
             CurrentWeapon.transform.localScale = new Vector3(-1, 1, 1);
             CurrentWeapon.IsFlip = false;
         }
-        if (_tryShoot)
+        if (_tryShoot && Upgraded == false)
             CurrentWeapon.Shoot();
+        if(_tryShoot && Upgraded == true)
+            CurrentWeapon.DoubleShoot();
     }
 }
