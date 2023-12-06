@@ -7533,6 +7533,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1399074637}
     - target: {fileID: 1242604382, guid: 7f8c94a88ecd710468187d148ab1b0f4, type: 3}
+      propertyPath: Coin
+      value: 
+      objectReference: {fileID: 5937418727340989042, guid: 6cd3685a2be6f0a4ca66526e8d982ca3, type: 3}
+    - target: {fileID: 1242604382, guid: 7f8c94a88ecd710468187d148ab1b0f4, type: 3}
       propertyPath: Stun.Duration
       value: 0
       objectReference: {fileID: 0}
