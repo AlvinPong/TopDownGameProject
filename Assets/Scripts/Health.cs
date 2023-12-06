@@ -155,7 +155,7 @@ public class Health : MonoBehaviour
     }
     public void PlayerHurt()
     {
-        if (!gameObject.CompareTag("Enemy"))
+        if (!gameObject.CompareTag("Player"))
         {
             return;
         }

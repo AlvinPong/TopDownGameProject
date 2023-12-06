@@ -80,9 +80,10 @@ public class PlaySound : MonoBehaviour
     {
         if (soundManager == null)
         {
-            return;
+            return;           
         }
 
+        
         soundManager.Play("Player hurt");
     }
 }
