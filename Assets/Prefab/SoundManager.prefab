@@ -75,3 +75,18 @@ MonoBehaviour:
     volume: 0.25
     pitch: 1.55
     source: {fileID: 0}
+  - name: Low health
+    clip: {fileID: 8300000, guid: d8cfe64752b0f0844bdaa1a44de7e811, type: 3}
+    volume: 0.55
+    pitch: 1.55
+    source: {fileID: 0}
+  - name: Firing sounds
+    clip: {fileID: 8300000, guid: 676c24a6725ec3b4783a219a19d9a31b, type: 3}
+    volume: 0.25
+    pitch: 1.55
+    source: {fileID: 0}
+  - name: Shield breaking
+    clip: {fileID: 8300000, guid: cde565538a971614786923caf73d1ec7, type: 3}
+    volume: 0.55
+    pitch: 1.55
+    source: {fileID: 0}

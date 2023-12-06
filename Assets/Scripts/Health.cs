@@ -33,14 +33,14 @@ public class Health : MonoBehaviour
     private HealthBarUI _healthBar;
     private Armor _armor;
     public EnemyHealthBar _enemyHealth;
+    private PlaySound _playsound;
     private void Start()
     {
-        _currentHealth = MaxHealth;
+        _playsound = GetComponent<PlaySound>();
         if (gameObject.CompareTag("Player"))
         {
             _armor = GetComponent<Armor>();
             _healthBar = GameObject.Find("HealthBarUI").GetComponent<HealthBarUI>();
-            
         }       
         if (_enemyHealth != null)
         {
@@ -49,12 +49,14 @@ public class Health : MonoBehaviour
     }
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            Damage(3f, this.gameObject );
+        }
+
+        Heartbeat();
         ResetInvulnerble();
         ResetStun();
-        if (_healthBar != null)
-        {
-            _healthBar.SetHealth(_currentHealth / 10);
-        }
     }
     private void ResetInvulnerble()
     {
@@ -97,6 +99,9 @@ public class Health : MonoBehaviour
             Die();
         }
 
+        ZombieHurt();
+        PlayerHurt();
+
         Invulnerable.StartCooldown();
         Stun.StartCooldown();
         _canDamage = false;
@@ -123,4 +128,40 @@ public class Health : MonoBehaviour
     {
         IsDead = true;
     }
+    public void Heartbeat()
+    {
+        if (!gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+
+        if(_currentHealth <= 3)
+        {
+            Debug.Log("health low, tyr play sound");
+
+            _playsound.LowHealth();
+        }
+        
+    }
+    public void ZombieHurt()
+    {
+        if (!gameObject.CompareTag("Enemy"))
+        {
+            return;
+        }
+
+        _playsound.ZombieMoans();
+
+    }
+    public void PlayerHurt()
+    {
+        if (!gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+
+        _playsound.PlayerMoan();
+
+    }
 }
+
