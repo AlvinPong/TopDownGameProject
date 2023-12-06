@@ -36,4 +36,21 @@ public class PlaySound : MonoBehaviour
 
         soundManager.Play("UI hover off");
     }
+    public void LowHealth()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+        soundManager.Play("Low health");
+    }   
+    public void ShootingSound()
+    {
+        if(soundManager == null)
+        {
+            return;
+        }
+        soundManager.Play("Firing sound");
+    }
 }
