@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 1242604382}
   - component: {fileID: 1618892105}
   - component: {fileID: 834486060}
+  - component: {fileID: 327938621}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -278,13 +279,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDead: 0
-  DeathParticles: {fileID: 0}
+  DeathParticles: {fileID: 7936932871254652390, guid: 8a9c83299d3675549883c66a57952a8e, type: 3}
+  Coin: {fileID: 0}
   _canDamage: 1
   Invulnerable:
-    Duration: 1
+    Duration: 0.5
     CurrentProgress: 0
   Stun:
-    Duration: 0.1
+    Duration: 0
     CurrentProgress: 0
   _currentHealth: 10
   MaxHealth: 10
@@ -314,12 +316,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c83fba99fb07148b6c438ec4fe726d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosive: {fileID: 0}
+  Explosive: {fileID: 4046659108047913799, guid: ad80a5a51362782458691ad3d5967209, type: 3}
   SpawnPos: {fileID: 1087568593}
   Interval:
     Duration: 1
     CurrentProgress: 0
-  Timer: 5
+  Amount: 5
+  BombAmount: {fileID: 0}
+--- !u!114 &327938621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4487504353108668524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3de32a63bb95b648af9fa413b0b2b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6197587327058355379
 GameObject:
   m_ObjectHideFlags: 0
