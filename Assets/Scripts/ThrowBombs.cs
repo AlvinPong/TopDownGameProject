@@ -38,7 +38,7 @@ public class ThrowBombs : MonoBehaviour
     }
     private void HandleInput()
     {
-        if (Input.GetKeyUp(KeyCode.G))
+        if (Input.GetKeyUp(KeyCode.Q))
         {
             if (Amount > 0)
             {
