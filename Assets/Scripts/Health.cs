@@ -125,14 +125,15 @@ public class Health : MonoBehaviour
         {
             GameObject.Instantiate(Coin, transform.position, transform.rotation);
         }
-        Destroy(this.gameObject);
-        Dead();
-        
+
+        IsDead = true;
+
+        Invoke("Dead", 0.5f);
     }
 
     public void Dead()
     {
-        IsDead = true;
+        Destroy(this.gameObject);
     }
     public void Heartbeat()
     {
