@@ -600,7 +600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6173842965744391560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDead: 0
   DeathParticles: {fileID: 7936932871254652390, guid: 8a9c83299d3675549883c66a57952a8e, type: 3}
-  Coin: {fileID: 0}
+  Coin: {fileID: 5937418727340989042, guid: 6cd3685a2be6f0a4ca66526e8d982ca3, type: 3}
   _canDamage: 1
   Invulnerable:
     Duration: 0

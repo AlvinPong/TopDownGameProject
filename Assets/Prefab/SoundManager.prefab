@@ -90,3 +90,28 @@ MonoBehaviour:
     volume: 0.55
     pitch: 1.55
     source: {fileID: 0}
+  - name: Buy Sound
+    clip: {fileID: 8300000, guid: 4620247cfb1958542bcf3be722ab2405, type: 3}
+    volume: 0.55
+    pitch: 1.55
+    source: {fileID: 0}
+  - name: Heal Buy
+    clip: {fileID: 8300000, guid: 46f71a55867b4b94ba95903332a7e449, type: 3}
+    volume: 0.55
+    pitch: 1.55
+    source: {fileID: 0}
+  - name: Shield Gain
+    clip: {fileID: 8300000, guid: 45bd591f454c5484f8d9ecd654dca27d, type: 3}
+    volume: 0.8
+    pitch: 1.55
+    source: {fileID: 0}
+  - name: Bomb Gain
+    clip: {fileID: 8300000, guid: 6d90b03b1bcdf4c4d87fd3332c8dea4e, type: 3}
+    volume: 0.8
+    pitch: 1.55
+    source: {fileID: 0}
+  - name: Pick Up
+    clip: {fileID: 8300000, guid: b14eb760333f5bc46a7faf8ae7da5241, type: 3}
+    volume: 1
+    pitch: 1.55
+    source: {fileID: 0}
