@@ -58,7 +58,6 @@ public class Health : MonoBehaviour
         Heartbeat();
         ResetInvulnerble();
         ResetStun();
-
         if (_healthBar != null)
         {
             _healthBar.SetHealth(_currentHealth / 10);
