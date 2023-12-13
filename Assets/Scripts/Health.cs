@@ -36,6 +36,7 @@ public class Health : MonoBehaviour
     private PlaySound _playsound;
     private void Start()
     {
+        _currentHealth = MaxHealth;
         _playsound = GetComponent<PlaySound>();
         if (gameObject.CompareTag("Player"))
         {
@@ -57,6 +58,10 @@ public class Health : MonoBehaviour
         Heartbeat();
         ResetInvulnerble();
         ResetStun();
+        if (_healthBar != null)
+        {
+            _healthBar.SetHealth(_currentHealth / 10);
+        }
     }
     private void ResetInvulnerble()
     {

@@ -6216,6 +6216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3de32a63bb95b648af9fa413b0b2b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canShieldsound: 0
 --- !u!1 &331039619
 GameObject:
   m_ObjectHideFlags: 0
@@ -7532,10 +7533,6 @@ PrefabInstance:
       propertyPath: CurrentWeapon
       value: 
       objectReference: {fileID: 1399074637}
-    - target: {fileID: 1242604382, guid: 7f8c94a88ecd710468187d148ab1b0f4, type: 3}
-      propertyPath: Coin
-      value: 
-      objectReference: {fileID: 5937418727340989042, guid: 6cd3685a2be6f0a4ca66526e8d982ca3, type: 3}
     - target: {fileID: 1242604382, guid: 7f8c94a88ecd710468187d148ab1b0f4, type: 3}
       propertyPath: Stun.Duration
       value: 0
@@ -10616,6 +10613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinAmount: {fileID: 1237572357}
   TotalAmount: {fileID: 213716524}
+  NotEnough: {fileID: 135779517}
   Cost: 20
   HealthUpgrades:
   - {fileID: 2114119344}
@@ -10635,7 +10633,6 @@ MonoBehaviour:
   - {fileID: 973055120}
   - {fileID: 727950568}
   - {fileID: 1942538988}
-  NotEnough: {fileID: 135779517}
 --- !u!1 &1718744439
 GameObject:
   m_ObjectHideFlags: 0
