@@ -12,15 +12,20 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        CoinText = GameObject.Find("CoinAmount").GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (CoinText == null) return;
-        CoinText.text = CoinAmount.ToString();
-        ShopCoinText.text = CoinAmount.ToString();
+        if (CoinText != null)
+        {
+            CoinText.text = CoinAmount.ToString();
+        }
+        if (ShopCoinText != null)
+        {
+            ShopCoinText.text = CoinAmount.ToString();
+        }
     }
     public void AddCoin(int AddAmount)
     {

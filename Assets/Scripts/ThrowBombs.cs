@@ -19,7 +19,7 @@ public class ThrowBombs : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BombAmount = GameObject.Find("BombUI").GetComponent<TMP_Text>();
+        BombAmount = GameObject.Find("BombAmount").GetComponent<TMP_Text>();
         _movement = GetComponent<Movement>();
         Amount = MaxAmount;
     }
@@ -38,7 +38,7 @@ public class ThrowBombs : MonoBehaviour
     }
     private void HandleInput()
     {
-        if (Input.GetKeyUp(KeyCode.G))
+        if (Input.GetKeyUp(KeyCode.Q))
         {
             if (Amount > 0)
             {

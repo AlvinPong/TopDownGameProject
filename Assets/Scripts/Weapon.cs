@@ -29,18 +29,22 @@ public class Weapon : MonoBehaviour
         if (ShootInterval.CurrentProgress != Cooldown.Progress.Finished)
             return;
         ShootInterval.CurrentProgress = Cooldown.Progress.Ready;
+        IntervalUpgrade();
     }
     public void Shoot()
     {
         if (ShootInterval.CurrentProgress != Cooldown.Progress.Ready)
             return;
 
-        GameObject bullet = GameObject.Instantiate(Projectile, SpawnPos.position, SpawnPos.rotation);
+        //GameObject bullet = GameObject.Instantiate(Projectile, SpawnPos.position, SpawnPos.rotation);
         
-        //GameObject bullet2 = GameObject.Instantiate(BulletType[BulletIndex], SpawnPos.position, SpawnPos.rotation);
-        
-        if (_isFlip)        
+        GameObject bullet = GameObject.Instantiate(BulletType[BulletIndex], SpawnPos.position, SpawnPos.rotation);
+
+        if (_isFlip)
+        {
             bullet.GetComponent<Projectile>().Speed *= -1;
+            bullet.transform.localScale = new Vector3(-1, 1, 1);
+        }
 
         ShootInterval.StartCooldown();
     }
@@ -64,5 +68,20 @@ public class Weapon : MonoBehaviour
     {
         if (BulletType[BulletIndex + 1] == null) return;
         BulletIndex += 1;
+    }
+    public void IntervalUpgrade()
+    {
+        if(BulletIndex == 0 || BulletIndex == 1)
+        {
+            ShootInterval.Duration = 0.3f;
+        }
+        if(BulletIndex == 2 || BulletIndex == 3)
+        {
+            ShootInterval.Duration = 0.15f;
+        }
+        if(BulletIndex == 4)
+        {
+            ShootInterval.Duration = 0.075f;
+        }
     }
 }

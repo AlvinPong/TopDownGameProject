@@ -10,6 +10,9 @@ public class ShopUpgrades : MonoBehaviour
     public TMP_Text TotalAmount;
     public TMP_Text NotEnough;
 
+    public Transform ResupplyPos;
+    public GameObject Resupply;
+
     protected int BuyAmount = 0;
     public int Cost = 20;
 
@@ -116,6 +119,7 @@ public class ShopUpgrades : MonoBehaviour
     }
     public void Buy()
     {
+        if (BuyAmount == 0) return;
         _scoreManager.CoinAmount -= BuyAmount;
         BuyAmount = 0;
 
@@ -136,5 +140,7 @@ public class ShopUpgrades : MonoBehaviour
             _bomb.MaxAmount += 1;
         }
         BombCount = 0;
+        if(Resupply != null)
+            GameObject.Instantiate(Resupply, ResupplyPos.position, ResupplyPos.rotation);
     }
 }
