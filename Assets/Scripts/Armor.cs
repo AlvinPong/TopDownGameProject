@@ -9,6 +9,7 @@ public class Armor : MonoBehaviour
 
     private PlaySound _playsound;
     private ArmorBarUI _armorBar;
+
     // Start is called before the first frame update
     void Start()
     {
