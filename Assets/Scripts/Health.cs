@@ -36,7 +36,7 @@ public class Health : MonoBehaviour
     private PlaySound _playsound;
     private void Start()
     {
-        _currentHealth = MaxHealth;
+        
         _playsound = GetComponent<PlaySound>();
         if (gameObject.CompareTag("Player"))
         {
@@ -126,8 +126,8 @@ public class Health : MonoBehaviour
         }
 
         IsDead = true;
-
-        Invoke("Dead", 0.5f);
+        _canDamage = false;
+        Invoke("Dead", 0.2f);
     }
 
     public void Dead()

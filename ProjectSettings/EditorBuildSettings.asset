@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelMap.unity
     guid: b4736171a5f9e9540a20f103e8b42794
   - enabled: 1
+    path: Assets/Scenes/LevelMap2.unity
+    guid: fc9b7fdb02ae9014b940db8acfd01333
+  - enabled: 1
     path: Assets/Scenes/PrisonMap.unity
     guid: ec0b65aefd8853c4eb6cb66217c35e2e
   - enabled: 1

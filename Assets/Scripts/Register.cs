@@ -13,7 +13,7 @@ public class Register : MonoBehaviour
         if (_spawnManager != null)
         {
             _spawnManager.Register(gameObject.GetInstanceID());
-            Debug.Log(gameObject.GetInstanceID());
+            //Debug.Log(gameObject.GetInstanceID());
         }
 
         _health = GetComponent<Health>();
@@ -27,15 +27,15 @@ public class Register : MonoBehaviour
             Debug.Log(" no health");
             return;
         }
-        if (_health.IsDead)
-            Debug.Log("dead");
+        //if (_health.IsDead)
+        //    Debug.Log("dead");
 
         if(_health._currentHealth <= 0)
         {
             if (_spawnManager != null)
             {
                 _spawnManager.Died(gameObject.GetInstanceID());
-                Debug.Log("I am ded");
+                //Debug.Log("I am ded");
             }
         }
     }
