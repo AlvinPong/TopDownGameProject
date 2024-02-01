@@ -21,7 +21,7 @@ public class ThrowBombs : MonoBehaviour
     {
         BombAmount = GameObject.Find("BombAmount").GetComponent<TMP_Text>();
         _movement = GetComponent<Movement>();
-        Amount = MaxAmount;
+        
     }
 
     // Update is called once per frame

@@ -13,17 +13,19 @@ public class ShopUI : MonoBehaviour
 
     private SpawnManager spawnManager;
 
-    private ShopUpgrades _shopUpgrades;
-
     public string HealthUpgrade = "ShopHealthUpgrade";
     public string ArmorUpgrade = "ShopArmorUpgrade";
     public string BombUpgrade = "ShopBombUpgrade";
+
+    public int HealthInput = 0;
+    public int ArmorInput = 0;
+    public int BombInput = 0;
 
     private SecondScene _secondScene;
     // Start is called before the first frame update
     void Start()
     {
-        _shopUpgrades = shopUI.GetComponent<ShopUpgrades>();
+        
         LoadShop();
         if (shopUI != null)
             shopUI.SetActive(false);
@@ -67,14 +69,14 @@ public class ShopUI : MonoBehaviour
     }
     public void SaveShop()
     {
-        PlayerPrefs.SetInt(HealthUpgrade, _shopUpgrades.HealthInput);
-        PlayerPrefs.SetInt(ArmorUpgrade, _shopUpgrades.ArmorInput);
-        PlayerPrefs.SetInt(BombUpgrade, _shopUpgrades.BombInput);
+        PlayerPrefs.SetInt(HealthUpgrade, HealthInput);
+        PlayerPrefs.SetInt(ArmorUpgrade, ArmorInput);
+        PlayerPrefs.SetInt(BombUpgrade, BombInput);
     }
     public void LoadShop()
     {
-        _shopUpgrades.HealthInput = PlayerPrefs.GetInt(HealthUpgrade);
-        _shopUpgrades.ArmorInput = PlayerPrefs.GetInt(ArmorUpgrade);
-        _shopUpgrades.BombInput = PlayerPrefs.GetInt(BombUpgrade);
+        HealthInput = PlayerPrefs.GetInt(HealthUpgrade);
+        ArmorInput = PlayerPrefs.GetInt(ArmorUpgrade);
+        BombInput = PlayerPrefs.GetInt(BombUpgrade);
     }
 }

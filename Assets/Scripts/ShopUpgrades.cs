@@ -20,10 +20,6 @@ public class ShopUpgrades : MonoBehaviour
     protected int MaxArmorInput = 5;
     protected int MaxBombInput = 5;
 
-    public int HealthInput = 0;
-    public int ArmorInput = 0;
-    public int BombInput = 0;
-
     protected int HealthCount = 0;
     protected int ArmorCount = 0;
     protected int BombCount = 0;
@@ -32,6 +28,7 @@ public class ShopUpgrades : MonoBehaviour
     public Image[] ArmorUpgrades;
     public Image[] BombUpgrades;
 
+    private ShopUI _shopUI;
     private Health _health;
     private Armor _armor;
     private ThrowBombs _bomb;
@@ -57,7 +54,7 @@ public class ShopUpgrades : MonoBehaviour
         {
             BombUpgrades[i].enabled = false ;
         }
-
+        _shopUI = GameObject.Find("Shop").GetComponentInChildren<ShopUI>();
         _health = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         _armor = GameObject.FindGameObjectWithTag("Player").GetComponent<Armor>();
         _bomb = GameObject.FindGameObjectWithTag("Player").GetComponent<ThrowBombs>();
@@ -71,54 +68,54 @@ public class ShopUpgrades : MonoBehaviour
         {
             TotalAmount.text = BuyAmount.ToString();
         }
-        for (int i = 0; i < HealthInput; i++)
+        for (int i = 0; i < _shopUI.HealthInput; i++)
         {
             HealthUpgrades[i].enabled = true;
         }
-        for (int i = 0; i < ArmorInput; i++)
+        for (int i = 0; i < _shopUI.ArmorInput; i++)
         {
             ArmorUpgrades[i].enabled = true;
         }
-        for (int i = 0; i < BombInput; i++)
+        for (int i = 0; i < _shopUI.BombInput; i++)
         {
             BombUpgrades[i].enabled = true;
         }
     }
     public void AddHealth()
     {
-        if (HealthInput == MaxHealthInput) return;
+        if (_shopUI.HealthInput == MaxHealthInput) return;
         if (BuyAmount >= _scoreManager.CoinAmount)
         {
             StartCoroutine(ShowNotEnough());
             return;
         }
-        HealthInput += 1;
+        _shopUI.HealthInput += 1;
         BuyAmount += Cost;
         HealthCount += 1;
 
     }
     public void AddArmor()
     {
-        if (ArmorInput == MaxArmorInput) return;
+        if (_shopUI.ArmorInput == MaxArmorInput) return;
         if (BuyAmount >= _scoreManager.CoinAmount)
         {
             StartCoroutine(ShowNotEnough());
             return;
         }
-        ArmorInput += 1;
+        _shopUI.ArmorInput += 1;
         BuyAmount += Cost;
         ArmorCount += 1;
 
     }
     public void AddBomb()
     {
-        if (BombInput == MaxBombInput) return;
+        if (_shopUI.BombInput == MaxBombInput) return;
         if (BuyAmount >= _scoreManager.CoinAmount)
         {
             StartCoroutine(ShowNotEnough());
             return;
         }
-        BombInput += 1;
+        _shopUI.BombInput += 1;
         BuyAmount += Cost;
         BombCount += 1;
 

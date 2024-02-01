@@ -15,9 +15,13 @@ public class SceneLoader : MonoBehaviour
     public string Map5 = "";
 
     private SecondScene _secondScene;
+
+    private ScoreManager _scoreManager;
     private void Start()
     {
         _secondScene = GetComponent<SecondScene>();
+
+        _scoreManager = GameObject.FindObjectOfType<ScoreManager>();
     }
     public void NextLevel()
     {
