@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinAmount: {fileID: 8416453374624993243}
   TotalAmount: {fileID: 8416453373470431986}
-  NotEnough: {fileID: 8416453373548363875}
+  NotEnoughText: {fileID: 8416453373548363875}
   ResupplyPos: {fileID: 0}
   Resupply: {fileID: 142006316452065616, guid: 9afbcdcf42ee34d4d903a2fd316cdb13, type: 3}
   Cost: 20

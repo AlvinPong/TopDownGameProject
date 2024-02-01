@@ -585,6 +585,7 @@ GameObject:
   - component: {fileID: 6173842965744391573}
   - component: {fileID: 6173842965744391572}
   - component: {fileID: 80335556199376254}
+  - component: {fileID: 7049503255649277188}
   m_Layer: 0
   m_Name: Zombie1
   m_TagString: Enemy
@@ -705,6 +706,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canShieldsound: 0
+--- !u!114 &7049503255649277188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6173842965744391560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3088130486b8a7048864559888ab9c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6173842966203481504
 GameObject:
   m_ObjectHideFlags: 0

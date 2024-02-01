@@ -266,6 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentWeapon: {fileID: 0}
   FirePoint: {fileID: 8546404094263117878}
+  Upgraded: 0
 --- !u!114 &1242604382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,13 +284,13 @@ MonoBehaviour:
   Coin: {fileID: 0}
   _canDamage: 1
   Invulnerable:
-    Duration: 0.5
+    Duration: 2
     CurrentProgress: 0
   Stun:
     Duration: 0
     CurrentProgress: 0
   _currentHealth: 10
-  MaxHealth: 10
+  MaxHealth: 5
   _enemyHealth: {fileID: 0}
 --- !u!114 &1618892105
 MonoBehaviour:
@@ -304,6 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentArmor: 10
+  MaxArmor: 0
 --- !u!114 &834486060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +324,7 @@ MonoBehaviour:
     Duration: 1
     CurrentProgress: 0
   Amount: 5
+  MaxAmount: 0
   BombAmount: {fileID: 0}
 --- !u!114 &327938621
 MonoBehaviour:
@@ -335,6 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3de32a63bb95b648af9fa413b0b2b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canShieldsound: 0
 --- !u!1 &6197587327058355379
 GameObject:
   m_ObjectHideFlags: 0
