@@ -36,7 +36,7 @@ public class Health : MonoBehaviour
     private PlaySound _playsound;
     private void Start()
     {
-        _currentHealth = MaxHealth;
+        
         _playsound = GetComponent<PlaySound>();
         if (gameObject.CompareTag("Player"))
         {
@@ -58,7 +58,6 @@ public class Health : MonoBehaviour
         Heartbeat();
         ResetInvulnerble();
         ResetStun();
-
         if (_healthBar != null)
         {
             _healthBar.SetHealth(_currentHealth / 10);
@@ -125,14 +124,15 @@ public class Health : MonoBehaviour
         {
             GameObject.Instantiate(Coin, transform.position, transform.rotation);
         }
-        Destroy(this.gameObject);
-        Dead();
-        
+
+        IsDead = true;
+        _canDamage = false;
+        Invoke("Dead", 0.2f);
     }
 
     public void Dead()
     {
-        IsDead = true;
+        Destroy(this.gameObject);
     }
     public void Heartbeat()
     {

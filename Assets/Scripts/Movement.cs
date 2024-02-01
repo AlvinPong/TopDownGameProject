@@ -105,7 +105,7 @@ public class Movement : MonoBehaviour
         _rigidbody.velocity = Vector2.zero;
         _rigidbody.velocity = new Vector2(pushHorizontal, pushVertical);
 
-        _disableInput = true;
+        //_disableInput = true;
     }
     // Update is called once per frame
     void Update()

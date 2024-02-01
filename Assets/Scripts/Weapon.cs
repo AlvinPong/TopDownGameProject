@@ -52,11 +52,13 @@ public class Weapon : MonoBehaviour
     {
         if (ShootInterval.CurrentProgress != Cooldown.Progress.Ready) return;
 
+        GameObject bullet = GameObject.Instantiate(BulletType[BulletIndex], SpawnPos.position, SpawnPos.rotation);
         GameObject bullet1 = GameObject.Instantiate(BulletType[BulletIndex], SpawnPos1.position, SpawnPos1.rotation);
         GameObject bullet2 = GameObject.Instantiate(BulletType[BulletIndex], SpawnPos2.position, SpawnPos2.rotation);
 
         if (_isFlip)
         {
+            bullet.GetComponent<Projectile>().Speed *= -1;
             bullet1.GetComponent<Projectile>().Speed *= -1;
             bullet2.GetComponent<Projectile>().Speed *= -1;
         }

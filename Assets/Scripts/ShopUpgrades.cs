@@ -8,7 +8,7 @@ public class ShopUpgrades : MonoBehaviour
 {
     public TMP_Text CoinAmount;
     public TMP_Text TotalAmount;
-    public TMP_Text NotEnough;
+    public TMP_Text NotEnoughText;
 
     public Transform ResupplyPos;
     public GameObject Resupply;
@@ -40,9 +40,9 @@ public class ShopUpgrades : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (NotEnough != null)
+        if (NotEnoughText != null)
         {
-            NotEnough.gameObject.SetActive(false);
+            NotEnoughText.gameObject.SetActive(false);
         }
 
         for (int i = 0; i < HealthUpgrades.Length; i++)
@@ -75,7 +75,11 @@ public class ShopUpgrades : MonoBehaviour
     public void AddHealth()
     {
         if (HealthInput == MaxHealthInput) return;
-        if (BuyAmount > _scoreManager.CoinAmount) return;
+        if (BuyAmount >= _scoreManager.CoinAmount)
+        {
+            StartCoroutine(ShowNotEnough());
+            return;
+        }
         HealthInput += 1;
         BuyAmount += Cost;
         HealthCount += 1;
@@ -90,7 +94,11 @@ public class ShopUpgrades : MonoBehaviour
     public void AddArmor()
     {
         if (ArmorInput == MaxArmorInput) return;
-        if (BuyAmount > _scoreManager.CoinAmount) return;
+        if (BuyAmount >= _scoreManager.CoinAmount)
+        {
+            StartCoroutine(ShowNotEnough());
+            return;
+        }
         ArmorInput += 1;
         BuyAmount += Cost;
         ArmorCount += 1;
@@ -105,7 +113,11 @@ public class ShopUpgrades : MonoBehaviour
     public void AddBomb()
     {
         if (BombInput == MaxBombInput) return;
-        if (BuyAmount > _scoreManager.CoinAmount) return;
+        if (BuyAmount >= _scoreManager.CoinAmount)
+        {
+            StartCoroutine(ShowNotEnough());
+            return;
+        }
         BombInput += 1;
         BuyAmount += Cost;
         BombCount += 1;
@@ -142,5 +154,11 @@ public class ShopUpgrades : MonoBehaviour
         BombCount = 0;
         if(Resupply != null)
             GameObject.Instantiate(Resupply, ResupplyPos.position, ResupplyPos.rotation);
+    }
+    public IEnumerator ShowNotEnough()
+    {
+        NotEnoughText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        NotEnoughText.gameObject.SetActive(false);
     }
 }

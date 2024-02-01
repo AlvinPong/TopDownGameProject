@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5748633315508386812}
   - component: {fileID: 2465183500015919465}
   - component: {fileID: 2465183500015919471}
-  - component: {fileID: 1761043242752522683}
+  - component: {fileID: -2892734523283472320}
   m_Layer: 0
   m_Name: Bullet_level_2
   m_TagString: Untagged
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 2
-  Speed: 900
+  Speed: 800
   PushForce: 50
   LifeTime:
     Duration: 2
@@ -108,7 +108,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   _rigidbody: {fileID: 0}
---- !u!82 &1761043242752522683
+--- !u!82 &-2892734523283472320
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

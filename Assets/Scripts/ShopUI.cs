@@ -11,16 +11,19 @@ public class ShopUI : MonoBehaviour
     //indicate shop is available or unavailable
     protected bool IsOpen = false;
 
+    private SpawnManager spawnManager;
     // Start is called before the first frame update
     void Start()
     {
         if(shopUI != null)
             shopUI.SetActive(false);
+        spawnManager = GameObject.FindObjectOfType<SpawnManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (spawnManager.MaxPerWave > 0 || spawnManager.CurrentZombies > 0) return;
         if (!PlayerInRange)
             return;
         if (InShop)

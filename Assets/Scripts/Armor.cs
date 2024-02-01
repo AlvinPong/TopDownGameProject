@@ -13,7 +13,7 @@ public class Armor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CurrentArmor = MaxArmor;
+        
         _armorBar = GameObject.Find("ArmorBarUI").GetComponent<ArmorBarUI>();
         _playsound = GetComponent<PlaySound>();
     }
