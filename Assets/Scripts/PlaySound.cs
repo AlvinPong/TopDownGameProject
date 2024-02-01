@@ -86,4 +86,55 @@ public class PlaySound : MonoBehaviour
         
         soundManager.Play("Player hurt");
     }
+    public void BuySound()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+
+        soundManager.Play("Buy Sound");
+    }
+    public void HealBuy()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+
+        soundManager.Play("Heal Buy");
+    }
+    public void ShieldBuy()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+
+        soundManager.Play("Shield Gain");
+    }
+    public void BombLoad()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+
+        soundManager.Play("Bomb Gain");
+    }
+    public void PickUp()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+
+        soundManager.Play("Pick Up");
+    }
+
 }

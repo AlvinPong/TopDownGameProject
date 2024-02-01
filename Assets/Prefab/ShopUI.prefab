@@ -240,6 +240,8 @@ GameObject:
   - component: {fileID: 8416453373391647437}
   - component: {fileID: 8416453373391647436}
   - component: {fileID: 8416453373391647439}
+  - component: {fileID: 820741232}
+  - component: {fileID: 820741233}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -361,6 +363,48 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &820741232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416453373391647441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 820741233}
+          m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+          m_MethodName: BuySound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &820741233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416453373391647441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3de32a63bb95b648af9fa413b0b2b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canShieldsound: 0
 --- !u!1 &8416453373419167565
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +839,8 @@ GameObject:
   - component: {fileID: 8416453373576047158}
   - component: {fileID: 8416453373576047161}
   - component: {fileID: 8416453373576047160}
+  - component: {fileID: 2102494742}
+  - component: {fileID: 2102494743}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -916,6 +962,48 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2102494742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416453373576047162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3de32a63bb95b648af9fa413b0b2b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canShieldsound: 0
+--- !u!114 &2102494743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416453373576047162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2102494742}
+          m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+          m_MethodName: HoverSoundOff
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &8416453373596322234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,7 +1403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8416453373847206665
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1439,6 +1527,9 @@ MonoBehaviour:
   ResupplyPos: {fileID: 0}
   Resupply: {fileID: 142006316452065616, guid: 9afbcdcf42ee34d4d903a2fd316cdb13, type: 3}
   Cost: 20
+  HealthInput: 0
+  ArmorInput: 0
+  BombInput: 0
   HealthUpgrades:
   - {fileID: 8416453373714772590}
   - {fileID: 8416453373419167562}
@@ -1621,6 +1712,8 @@ GameObject:
   - component: {fileID: 8416453374206376928}
   - component: {fileID: 8416453374206376931}
   - component: {fileID: 8416453374206376930}
+  - component: {fileID: 1141844295}
+  - component: {fileID: 1141844296}
   m_Layer: 5
   m_Name: BombsButton
   m_TagString: Untagged
@@ -1742,6 +1835,48 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1141844295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416453374206376932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1141844296}
+          m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+          m_MethodName: BombLoad
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1141844296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416453374206376932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3de32a63bb95b648af9fa413b0b2b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canShieldsound: 0
 --- !u!1 &8416453374222271130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,6 +1889,8 @@ GameObject:
   - component: {fileID: 8416453374222271126}
   - component: {fileID: 8416453374222271129}
   - component: {fileID: 8416453374222271128}
+  - component: {fileID: 292913293}
+  - component: {fileID: 292913294}
   m_Layer: 5
   m_Name: HealthButton
   m_TagString: Untagged
@@ -1875,6 +2012,48 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &292913293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416453374222271130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 292913294}
+          m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+          m_MethodName: HealBuy
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &292913294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416453374222271130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3de32a63bb95b648af9fa413b0b2b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canShieldsound: 0
 --- !u!1 &8416453374237891378
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,6 +2370,8 @@ GameObject:
   - component: {fileID: 8416453374595650465}
   - component: {fileID: 8416453374595650464}
   - component: {fileID: 8416453374595650467}
+  - component: {fileID: 796436724}
+  - component: {fileID: 796436725}
   m_Layer: 5
   m_Name: ArmorButton
   m_TagString: Untagged
@@ -2312,6 +2493,48 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &796436724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416453374595650469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3de32a63bb95b648af9fa413b0b2b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canShieldsound: 0
+--- !u!114 &796436725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416453374595650469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 796436724}
+          m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+          m_MethodName: ShieldBuy
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &8416453374624993245
 GameObject:
   m_ObjectHideFlags: 0
