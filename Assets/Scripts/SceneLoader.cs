@@ -14,6 +14,11 @@ public class SceneLoader : MonoBehaviour
     public string Map4 = "";
     public string Map5 = "";
 
+    private SecondScene _secondScene;
+    private void Start()
+    {
+        _secondScene = GetComponent<SecondScene>();
+    }
     public void NextLevel()
     {
         if (NextScene == "") return;
@@ -38,26 +43,31 @@ public class SceneLoader : MonoBehaviour
     public void LaodMap1()
     {
         if (Map1 == "") return;
+        _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map1);
     }
     public void LaodMap2()
     {
         if (Map2 == "") return;
+        _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map2);
     }
     public void LaodMap3()
     {
         if (Map3 == "") return;
+        _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map3);
     }
     public void LaodMap4()
     {
         if (Map4 == "") return;
+        _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map4);
     }
     public void LaodMap5()
     {
         if (Map5 == "") return;
+        _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map5);
     }
 }

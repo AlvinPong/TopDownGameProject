@@ -20,9 +20,9 @@ public class ShopUpgrades : MonoBehaviour
     protected int MaxArmorInput = 5;
     protected int MaxBombInput = 5;
 
-    protected int HealthInput = 0;
-    protected int ArmorInput = 0;
-    protected int BombInput = 0;
+    public int HealthInput = 0;
+    public int ArmorInput = 0;
+    public int BombInput = 0;
 
     protected int HealthCount = 0;
     protected int ArmorCount = 0;
@@ -71,6 +71,18 @@ public class ShopUpgrades : MonoBehaviour
         {
             TotalAmount.text = BuyAmount.ToString();
         }
+        for (int i = 0; i < HealthInput; i++)
+        {
+            HealthUpgrades[i].enabled = true;
+        }
+        for (int i = 0; i < ArmorInput; i++)
+        {
+            ArmorUpgrades[i].enabled = true;
+        }
+        for (int i = 0; i < BombInput; i++)
+        {
+            BombUpgrades[i].enabled = true;
+        }
     }
     public void AddHealth()
     {
@@ -84,12 +96,6 @@ public class ShopUpgrades : MonoBehaviour
         BuyAmount += Cost;
         HealthCount += 1;
 
-        for (int i = 0; i < HealthInput; i++)
-        {
-            HealthUpgrades[i].enabled = true;
-        }
-
-        //_health.MaxHealth += 1;
     }
     public void AddArmor()
     {
@@ -103,12 +109,6 @@ public class ShopUpgrades : MonoBehaviour
         BuyAmount += Cost;
         ArmorCount += 1;
 
-        for (int i = 0; i < ArmorInput; i++)
-        {
-            ArmorUpgrades[i].enabled = true;
-        }
-
-        //_armor.MaxArmor += 2;
     }
     public void AddBomb()
     {
@@ -122,12 +122,6 @@ public class ShopUpgrades : MonoBehaviour
         BuyAmount += Cost;
         BombCount += 1;
 
-        for (int i = 0; i < BombInput; i++)
-        {
-            BombUpgrades[i].enabled = true;
-        }
-
-        //_bomb.Amount += 1;
     }
     public void Buy()
     {

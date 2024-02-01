@@ -12,22 +12,31 @@ public class ShopUI : MonoBehaviour
     protected bool IsOpen = false;
 
     private SpawnManager spawnManager;
+
+    private ShopUpgrades _shopUpgrades;
+
+    public string HealthUpgrade = "ShopHealthUpgrade";
+    public string ArmorUpgrade = "ShopArmorUpgrade";
+    public string BombUpgrade = "ShopBombUpgrade";
+
+    private SecondScene _secondScene;
     // Start is called before the first frame update
     void Start()
     {
-        if(shopUI != null)
+        _shopUpgrades = shopUI.GetComponent<ShopUpgrades>();
+        LoadShop();
+        if (shopUI != null)
             shopUI.SetActive(false);
         spawnManager = GameObject.FindObjectOfType<SpawnManager>();
+        _secondScene = GameObject.Find("GameManager").GetComponent<SecondScene>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (spawnManager.MaxPerWave > 0 || spawnManager.CurrentZombies > 0) return;
-        if (!PlayerInRange)
-            return;
-        if (InShop)
-            return;
+        if (spawnManager.MaxPerWave > 0 || spawnManager.CurrentZombies > 0 || !PlayerInRange || InShop) return;
+        
         if(Input.GetKeyDown(KeyCode.E))
         {
             shopUI.SetActive(true);
@@ -52,7 +61,20 @@ public class ShopUI : MonoBehaviour
     {
         if (!InShop)
             return;
+        SaveShop();
         shopUI.SetActive(false);
         InShop = false;
+    }
+    public void SaveShop()
+    {
+        PlayerPrefs.SetInt(HealthUpgrade, _shopUpgrades.HealthInput);
+        PlayerPrefs.SetInt(ArmorUpgrade, _shopUpgrades.ArmorInput);
+        PlayerPrefs.SetInt(BombUpgrade, _shopUpgrades.BombInput);
+    }
+    public void LoadShop()
+    {
+        _shopUpgrades.HealthInput = PlayerPrefs.GetInt(HealthUpgrade);
+        _shopUpgrades.ArmorInput = PlayerPrefs.GetInt(ArmorUpgrade);
+        _shopUpgrades.BombInput = PlayerPrefs.GetInt(BombUpgrade);
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4011149787606026111}
   - component: {fileID: 4011149787606026104}
   - component: {fileID: 1934669413}
+  - component: {fileID: -1640403575587488400}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -71,3 +72,21 @@ MonoBehaviour:
   NewMaxArmor: 0
   NewBombAmount: 0
   NewMaxBomb: 0
+  PlayerHealth: PlayerCurrentHealth
+  PlayerMaxHealth: PlayerMaxHealth
+  PlayerArmor: PlayerCurrentArmor
+  PlayerMaxArmor: PlayerMaxArmor
+  PlayerBombs: PlayerCurrentBombs
+  PlayerMaxBombs: PlayerMaxBombs
+--- !u!114 &-1640403575587488400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4011149787606026105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723d7c32107388e4c8e011a60c323e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

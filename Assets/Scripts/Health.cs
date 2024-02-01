@@ -50,7 +50,11 @@ public class Health : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.L))
+        if (_healthBar != null)
+        {
+            _healthBar.SetHealth(_currentHealth / 10);
+        }
+        if (Input.GetKeyDown(KeyCode.L))
         {
             Damage(3f, this.gameObject );
         }
@@ -58,10 +62,7 @@ public class Health : MonoBehaviour
         Heartbeat();
         ResetInvulnerble();
         ResetStun();
-        if (_healthBar != null)
-        {
-            _healthBar.SetHealth(_currentHealth / 10);
-        }
+        
     }
     private void ResetInvulnerble()
     {
