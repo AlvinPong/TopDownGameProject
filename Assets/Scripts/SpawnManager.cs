@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
     public int MaxPerZombie = 50;
+    public int MaxPerWave = 50;
     public GameObject Zombie;
 
-    protected int CurrentZombies = 0;
+    public int CurrentZombies = 0;
 
     protected List<int> ZombieList = new List<int>();
 
     public float StartingInterval = 5f;
     public float SpawnInterval = 5f;
     public float SpawnTimer = 0f;
+
+    public Transform[] SpawnLocations;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +36,7 @@ public class SpawnManager : MonoBehaviour
     public void Register(int id)
     {
         ZombieList.Add(id);
-        Debug.Log("Registering " + id);
+        //Debug.Log("Registering " + id);
     }
     public void Died(int id)
     {
@@ -40,18 +44,21 @@ public class SpawnManager : MonoBehaviour
         {
             CurrentZombies--;
             ZombieList.Remove(id);
-            Debug.Log("Removing " + id);
+            //Debug.Log("Removing " + id);
         }
     }
     public void SpawnZombie()
     {
-        if(Zombie == null) return;
-        if (SpawnTimer > 0) return;
-        if (CurrentZombies >= MaxPerZombie) return;
+        if (Zombie == null || SpawnTimer > 0 || MaxPerWave <= 0 || CurrentZombies >= MaxPerZombie) return;
 
-        Instantiate(Zombie, transform.position, Quaternion.identity);
-        CurrentZombies ++;
 
+        for (int i = 0; i < SpawnLocations.Length; i++)
+        {
+            Instantiate(Zombie, SpawnLocations[i].position, Quaternion.identity);
+            CurrentZombies++;
+            MaxPerWave--;
+        }
+        
         SpawnTimer = SpawnInterval;
     }
 }
