@@ -51,9 +51,9 @@ MonoBehaviour:
   MainMenuScene: MainMenu
   Map1: LevelMap
   Map2: LevelMap2
-  Map3: 
-  Map4: 
-  Map5: 
+  Map3: LevelMap3
+  Map4: LevelMap4
+  Map5: LevelMap5
 --- !u!114 &1934669413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,12 +66,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a0ed3ca78c5ff428dd56a1b84ede81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewHealth: 0
-  NewMaxHealth: 0
-  NewArmor: 0
-  NewMaxArmor: 0
-  NewBombAmount: 0
-  NewMaxBomb: 0
   PlayerHealth: PlayerCurrentHealth
   PlayerMaxHealth: PlayerMaxHealth
   PlayerArmor: PlayerCurrentArmor

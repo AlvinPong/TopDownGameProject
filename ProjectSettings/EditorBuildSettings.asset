@@ -18,12 +18,21 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelMap2.unity
     guid: fc9b7fdb02ae9014b940db8acfd01333
   - enabled: 1
-    path: Assets/Scenes/PrisonMap.unity
-    guid: ec0b65aefd8853c4eb6cb66217c35e2e
+    path: Assets/Scenes/LevelMap3.unity
+    guid: a2af0c0f04057ab45be6fd664921b44d
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/LevelMap4.unity
+    guid: 8de549fda4dea2448a1ab375a977bfa4
   - enabled: 1
-    path: Assets/Scenes/Test.unity
-    guid: b2882d98d5f481e4e8637809d9c5bebf
+    path: Assets/Scenes/LevelMap5.unity
+    guid: 4f88d67c72c890348bee8c9cf22c046a
+  - enabled: 1
+    path: Assets/Scenes/LevelMap6.unity
+    guid: 0d17f786d1d2ad543ba0c17e49515dea
+  - enabled: 1
+    path: Assets/Scenes/Winner.unity
+    guid: 1670cde6c3800584895480c3da9f6838
+  - enabled: 1
+    path: Assets/Scenes/CharacterDied.unity
+    guid: 55d4fd143d5cf9b40bb69052af944e49
   m_configObjects: {}
