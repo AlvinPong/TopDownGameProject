@@ -42,12 +42,12 @@ public class SecondScene : MonoBehaviour
     }
     public void SetPlayer()
     {
-        _playerHealth._currentHealth = PlayerPrefs.GetFloat(PlayerHealth);
-        _playerHealth.MaxHealth = PlayerPrefs.GetFloat(PlayerMaxHealth);
-        _playerArmor.CurrentArmor = PlayerPrefs.GetFloat(PlayerArmor);
-        _playerArmor.MaxArmor = PlayerPrefs.GetFloat(PlayerMaxArmor);
-        _playerBombs.Amount = PlayerPrefs.GetFloat(PlayerBombs);
-        _playerBombs.MaxAmount = PlayerPrefs.GetFloat(PlayerMaxBombs);
+        _playerHealth._currentHealth = PlayerPrefs.GetFloat(PlayerHealth, 5);
+        _playerHealth.MaxHealth = PlayerPrefs.GetFloat(PlayerMaxHealth, 5);
+        _playerArmor.CurrentArmor = PlayerPrefs.GetFloat(PlayerArmor, 3);
+        _playerArmor.MaxArmor = PlayerPrefs.GetFloat(PlayerMaxArmor, 3);
+        _playerBombs.Amount = PlayerPrefs.GetFloat(PlayerBombs, 0);
+        _playerBombs.MaxAmount = PlayerPrefs.GetFloat(PlayerMaxBombs, 0);
 
     }
 }

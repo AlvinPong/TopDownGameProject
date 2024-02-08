@@ -44,8 +44,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022f610380ab44f4491ceb5370be56e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxPerZombie: 10
+  MaxPerZombie: 60
+  MaxPerWave: 20
   Zombie: {fileID: 6173842965744391560, guid: 65b2d9337e1341e42a89baa0de74be9f, type: 3}
-  StartingInterval: 3
+  CurrentZombies: 0
+  StartingInterval: 5
   SpawnInterval: 3
   SpawnTimer: 0
+  SpawnLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

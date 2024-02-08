@@ -42,9 +42,7 @@ public class Armor : MonoBehaviour
         if (CurrentArmor >0)
         {
             _playsound.canShieldsound = true;
-        }
-
-        if (CurrentArmor <=0)
+        } else if (CurrentArmor <=0)
         {
             _playsound.ShieldBreaking();
             _playsound.canShieldsound = false;

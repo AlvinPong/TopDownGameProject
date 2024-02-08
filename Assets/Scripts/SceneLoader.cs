@@ -13,6 +13,7 @@ public class SceneLoader : MonoBehaviour
     public string Map3 = "";
     public string Map4 = "";
     public string Map5 = "";
+    public string Map6 = "";
 
     private SecondScene _secondScene;
 
@@ -73,5 +74,12 @@ public class SceneLoader : MonoBehaviour
         if (Map5 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map5);
+    }
+
+    public void LoadMap6()
+    {
+        if (Map6 == "") return;
+        _secondScene.SavePlayerStats();
+        SceneManager.LoadScene(Map6);
     }
 }
