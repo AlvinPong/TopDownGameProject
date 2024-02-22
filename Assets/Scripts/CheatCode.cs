@@ -12,6 +12,10 @@ public class CheatCode : MonoBehaviour
     private ShopUI _shopUI;
 
     private ScoreManager _scoreManager;
+
+    private Weapon _weapon;
+    private WeaponHandler _weaponHandler;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +24,15 @@ public class CheatCode : MonoBehaviour
         _bombs = GameObject.FindGameObjectWithTag("Player").GetComponent<ThrowBombs>();
         _shopUI = GameObject.Find("Shop").GetComponentInChildren<ShopUI>();
         _scoreManager = GameObject.FindObjectOfType<ScoreManager>();
+
+        _weapon = GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>();
+        _weaponHandler = GameObject.FindGameObjectWithTag("Player").GetComponent<WeaponHandler>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K))
+        if(Input.GetKeyUp(KeyCode.K))
         {
             Debug.Log("RESET ALL");
             _health._currentHealth = 5;
@@ -43,6 +50,18 @@ public class CheatCode : MonoBehaviour
             PlayerPrefs.SetInt(_shopUI.BombUpgrade, 0);
 
             _scoreManager.CoinAmount = 100;
+        }
+        if (Input.GetKeyUp(KeyCode.C) && _weapon.BulletIndex < 4)
+        {
+            _weapon.BulletIndex += 1;
+        }
+        if (Input.GetKeyUp(KeyCode.V) && _weapon.BulletIndex > 0)
+        {
+            _weapon.BulletIndex -= 1;
+        }
+            if (Input.GetKeyUp(KeyCode.B) && _weaponHandler.Upgraded == false)
+        {
+            _weaponHandler.Upgraded = true;
         }
     }
 }

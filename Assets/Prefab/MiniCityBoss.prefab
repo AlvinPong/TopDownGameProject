@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1541498448794474408, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
+      propertyPath: Acceleration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107791713314817046, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
+      propertyPath: MaxHealth
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107791713314817046, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
+      propertyPath: _currentHealth
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 3878643008734580616, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -21,11 +33,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3878643009706888028, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.7821875
+      value: 7.8612843
       objectReference: {fileID: 0}
     - target: {fileID: 3878643009706888028, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8503619
+      value: 0.25515428
       objectReference: {fileID: 0}
     - target: {fileID: 3878643009706888028, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37,15 +49,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3878643009706888028, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3878643009706888028, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3878643009706888028, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3878643009706888028, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -61,7 +73,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3878643009706888029, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
       propertyPath: m_Name
-      value: MiniBossNormal
+      value: MiniCityBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 5033014321223355487, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
+      propertyPath: Damage
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
