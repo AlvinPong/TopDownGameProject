@@ -51,7 +51,7 @@ public class Projectile : MonoBehaviour
         Debug.Log("Pew Pew");
         _playsound.BulletLevel1Sound();
     }
-
+    //ask tommy later
     public void BulletLevel3()
     {
         if (!gameObject.CompareTag("BulletLevel3"))

@@ -24,6 +24,6 @@ public class MiniCutscene : MonoBehaviour
     {
         GameObject.FindGameObjectsWithTag("Boss");
 
-
+        //ask tommy later
     }
 }
