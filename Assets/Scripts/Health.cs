@@ -107,6 +107,7 @@ public class Health : MonoBehaviour
 
         ZombieHurt();
         PlayerHurt();
+        BossZombieHurt();
 
         Invulnerable.StartCooldown();
         Stun.StartCooldown();
@@ -169,6 +170,15 @@ public class Health : MonoBehaviour
 
         _playsound.PlayerMoan();
 
+    }
+    public void BossZombieHurt()
+    {
+        if (!gameObject.CompareTag("Boss"))
+        {
+            return;
+        }
+
+        _playsound.MiniBossSound();
     }
 }
 

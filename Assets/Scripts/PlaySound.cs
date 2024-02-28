@@ -136,5 +136,55 @@ public class PlaySound : MonoBehaviour
 
         soundManager.Play("Pick Up");
     }
+    public void BombBoom()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
 
+
+        soundManager.Play("Bomb Exploding");
+    }
+    public void MiniBossSound()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+
+        soundManager.Play("MiniBossHurt");
+    }
+
+    public void MiniBossRoar()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+
+        soundManager.Play("MiniBossRoar");
+    }
+    public void BulletLevel1Sound()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+
+        soundManager.Play("BulletProjectileLevel1");
+    }
+    public void BulletLevel3Sound()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+
+        soundManager.Play("BulletProjectileLevel3");
+    }
 }

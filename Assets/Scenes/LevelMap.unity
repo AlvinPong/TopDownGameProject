@@ -1538,10 +1538,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4387183512449038085, guid: 622cfd15748dc1846bae85359ba10371, type: 3}
-      propertyPath: sounds.Array.data[4].name
-      value: Zombies moan
-      objectReference: {fileID: 0}
     - target: {fileID: 4387183512449038086, guid: 622cfd15748dc1846bae85359ba10371, type: 3}
       propertyPath: m_Name
       value: SoundManager

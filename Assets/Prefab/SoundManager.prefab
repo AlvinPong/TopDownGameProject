@@ -115,3 +115,28 @@ MonoBehaviour:
     volume: 1
     pitch: 1.55
     source: {fileID: 0}
+  - name: Bomb Exploding
+    clip: {fileID: 8300000, guid: cdf16acc9cabfc048b5eb4cd747e04e2, type: 3}
+    volume: 0.5
+    pitch: 1.55
+    source: {fileID: 0}
+  - name: MiniBossHurt
+    clip: {fileID: 8300000, guid: 5981c32b007e8464ab3ef9fda8ebc177, type: 3}
+    volume: 0.5
+    pitch: 1.55
+    source: {fileID: 0}
+  - name: MiniBossRoar
+    clip: {fileID: 8300000, guid: 36cd3b784789ecd4aa71cd3895baef69, type: 3}
+    volume: 0.5
+    pitch: 1.55
+    source: {fileID: 0}
+  - name: BulletProjectileLevel1
+    clip: {fileID: 8300000, guid: f51f66f1fe8e83c428b136a2eedf4e04, type: 3}
+    volume: 0.5
+    pitch: 1.55
+    source: {fileID: 0}
+  - name: BulletProjectileLevel3
+    clip: {fileID: 8300000, guid: 64eb98893ff8b1545a7a59ac6c635e6b, type: 3}
+    volume: 0.5
+    pitch: 1.55
+    source: {fileID: 0}
