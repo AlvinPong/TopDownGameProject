@@ -1185,7 +1185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &394133739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4374,6 +4374,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5952129163185052314, guid: 9b34b9291bd280a4184a02fe6a40ab81, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952129163185052314, guid: 9b34b9291bd280a4184a02fe6a40ab81, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952129163185052314, guid: 9b34b9291bd280a4184a02fe6a40ab81, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 390
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952129163185052314, guid: 9b34b9291bd280a4184a02fe6a40ab81, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 185
+      objectReference: {fileID: 0}
     - target: {fileID: 5952129164079249255, guid: 9b34b9291bd280a4184a02fe6a40ab81, type: 3}
       propertyPath: m_Name
       value: PlayerUI
@@ -4461,6 +4477,10 @@ PrefabInstance:
     - target: {fileID: 5952129164079249307, guid: 9b34b9291bd280a4184a02fe6a40ab81, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952129164158909592, guid: 9b34b9291bd280a4184a02fe6a40ab81, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 297
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b34b9291bd280a4184a02fe6a40ab81, type: 3}
@@ -5821,7 +5841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8416453373847206669, guid: b301b4801996cee47ac372e4a5767e03, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b301b4801996cee47ac372e4a5767e03, type: 3}
@@ -5886,11 +5906,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8915225337567419497, guid: 25ba4bd32a2ae5b4f88e1d8556cd0ee8, type: 3}
       propertyPath: MaxPerWave
-      value: 24
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8915225337567419497, guid: 25ba4bd32a2ae5b4f88e1d8556cd0ee8, type: 3}
       propertyPath: MaxPerZombie
-      value: 120
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8915225337567419497, guid: 25ba4bd32a2ae5b4f88e1d8556cd0ee8, type: 3}
       propertyPath: StartingInterval

@@ -953,6 +953,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1640403575587488400, guid: 7082f2fc0531fa94383dc7fc8608a5e0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4011149787606026104, guid: 7082f2fc0531fa94383dc7fc8608a5e0, type: 3}
       propertyPath: NextScene
       value: Instruction
@@ -1046,6 +1050,9 @@ MonoBehaviour:
   PlayerMaxArmor: PlayerMaxArmor
   PlayerBombs: PlayerCurrentBombs
   PlayerMaxBombs: PlayerMaxBombs
+  HealthUpgrade: ShopHealthUpgrade
+  ArmorUpgrade: ShopArmorUpgrade
+  BombUpgrade: ShopBombUpgrade
 --- !u!1 &1287762430
 GameObject:
   m_ObjectHideFlags: 0

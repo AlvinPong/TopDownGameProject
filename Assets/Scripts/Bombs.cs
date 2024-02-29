@@ -25,6 +25,7 @@ public class Bombs : MonoBehaviour
         LifeTime.StartCooldown();
         _rigidbody = GetComponent<Rigidbody2D>();
         _rigidbody.AddRelativeForce(new Vector2(XSpeed, YSpeed));
+        _playsound = GetComponent<PlaySound>();
     }
 
     // Update is called once per frame
@@ -41,6 +42,7 @@ public class Bombs : MonoBehaviour
     }
     private void Explode()
     {
+        BombExplodeSound();
         _rigidbody.velocity = Vector3.zero;
         Trigger.SetActive(true);
     }
@@ -70,7 +72,6 @@ public class Bombs : MonoBehaviour
     }
     private void BombExplodeSound()
     {
-        //Ask tommy later
         _playsound.BombBoom();
     } 
     private void Die()

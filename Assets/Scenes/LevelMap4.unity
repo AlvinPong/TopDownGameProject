@@ -5052,11 +5052,11 @@ PrefabInstance:
       objectReference: {fileID: 4336458682431893236, guid: 246337868837b874eaeae69ac30227ac, type: 3}
     - target: {fileID: 8915225337567419497, guid: 25ba4bd32a2ae5b4f88e1d8556cd0ee8, type: 3}
       propertyPath: MaxPerWave
-      value: 24
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8915225337567419497, guid: 25ba4bd32a2ae5b4f88e1d8556cd0ee8, type: 3}
       propertyPath: MaxPerZombie
-      value: 120
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8915225337567419497, guid: 25ba4bd32a2ae5b4f88e1d8556cd0ee8, type: 3}
       propertyPath: StartingInterval

@@ -9,27 +9,36 @@ public class ThrowBombs : MonoBehaviour
     public Transform SpawnPos;
 
     public Cooldown Interval;
-
-    public float Amount = 5;
-    public float MaxAmount = 5;
-
+    
     protected Movement _movement;
 
-    public TMP_Text BombAmount;
+    public TMP_Text BombTimer;
+
+    public Bombs bombs;
+    public float CurrentDamage = 10;
     // Start is called before the first frame update
     void Start()
     {
-        BombAmount = GameObject.Find("BombAmount").GetComponent<TMP_Text>();
+        BombTimer = GameObject.Find("BombAmount").GetComponent<TMP_Text>();
         _movement = GetComponent<Movement>();
+        bombs = Explosive.GetComponent<Bombs>();
         
+        bombs.Damage = CurrentDamage;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (BombAmount != null)
+        if (BombTimer != null)
         {
-            BombAmount.text = Amount.ToString();
+            if (Interval.CurrentProgress == Cooldown.Progress.Ready)
+            {
+                BombTimer.text = "READY";
+            }
+            else
+            {
+                BombTimer.text = "Wait";
+            }
         }
         HandleInput();
         if (Interval.CurrentProgress != Cooldown.Progress.Finished)
@@ -40,10 +49,7 @@ public class ThrowBombs : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Q))
         {
-            if (Amount > 0)
-            {
-                ThrowExplosive();
-            }
+            ThrowExplosive();
         }
     }
     private void ThrowExplosive()
@@ -53,7 +59,7 @@ public class ThrowBombs : MonoBehaviour
 
         GameObject explosive = GameObject.Instantiate(Explosive, SpawnPos.position, SpawnPos.rotation);
 
-        Amount -= 1;
+        
 
         if (_movement.IsFacingUp)
         {
@@ -78,4 +84,16 @@ public class ThrowBombs : MonoBehaviour
 
         Interval.StartCooldown();
     }
+    public void CooldownUpgrade()
+    {
+        Interval.Duration -= 1;
+    }
+    public void DamageUpgrade()
+    {
+        if(Explosive != null)
+        {
+            bombs.Damage += 10;
+            CurrentDamage += 10;
+        }
+    }   
 }

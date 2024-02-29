@@ -54,15 +54,14 @@ public class Health : MonoBehaviour
         {
             _healthBar.SetHealth(_currentHealth / 10);
         }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Damage(3f, this.gameObject );
-        }
 
         Heartbeat();
         ResetInvulnerble();
         ResetStun();
-        
+        if (Input.GetKeyUp(KeyCode.L) && gameObject.CompareTag("Enemy") || Input.GetKeyUp(KeyCode.L) && gameObject.CompareTag("Boss"))
+        {
+            Damage(100, gameObject);
+        }
     }
     private void ResetInvulnerble()
     {

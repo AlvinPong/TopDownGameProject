@@ -23,17 +23,18 @@ public class Projectile : MonoBehaviour
 
         LifeTime.StartCooldown();
         _rigidbody.AddRelativeForce(new Vector2(Speed, 0f));
-        
+        _playsound = GetComponent<PlaySound>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        BulletLevel1();
+        BulletLevel3();
         if (LifeTime.CurrentProgress != Cooldown.Progress.Finished)
             return;
 
-        BulletLevel1();
-        BulletLevel3();
         Die();
     }
 
@@ -51,7 +52,7 @@ public class Projectile : MonoBehaviour
         Debug.Log("Pew Pew");
         _playsound.BulletLevel1Sound();
     }
-    //ask tommy later
+    
     public void BulletLevel3()
     {
         if (!gameObject.CompareTag("BulletLevel3"))
