@@ -9,8 +9,8 @@ public class SecondScene : MonoBehaviour
     public string PlayerMaxHealth = "PlayerMaxHealth";
     public string PlayerArmor = "PlayerCurrentArmor";
     public string PlayerMaxArmor = "PlayerMaxArmor";
-    public string PlayerBombs = "PlayerCurrentBombs";
-    public string PlayerMaxBombs = "PlayerMaxBombs";
+    public string PlayerBombsDamage = "PlayerBombDamage";
+    public string PlayerBombsCooldown = "PlayerBombCooldown";
 
     private Health _playerHealth;
     private Armor _playerArmor;
@@ -37,8 +37,8 @@ public class SecondScene : MonoBehaviour
         PlayerPrefs.SetFloat(PlayerMaxHealth, _playerHealth.MaxHealth);
         PlayerPrefs.SetFloat(PlayerArmor, _playerArmor.CurrentArmor);
         PlayerPrefs.SetFloat(PlayerMaxArmor, _playerArmor.MaxArmor);
-        PlayerPrefs.SetFloat(PlayerBombs, _playerBombs.Amount);
-        PlayerPrefs.SetFloat(PlayerMaxBombs, _playerBombs.MaxAmount);
+        PlayerPrefs.SetFloat(PlayerBombsDamage, _playerBombs.CurrentDamage);
+        PlayerPrefs.SetFloat(PlayerBombsCooldown, _playerBombs.Interval.Duration);
     }
     public void SetPlayer()
     {
@@ -46,8 +46,7 @@ public class SecondScene : MonoBehaviour
         _playerHealth.MaxHealth = PlayerPrefs.GetFloat(PlayerMaxHealth, 5);
         _playerArmor.CurrentArmor = PlayerPrefs.GetFloat(PlayerArmor, 3);
         _playerArmor.MaxArmor = PlayerPrefs.GetFloat(PlayerMaxArmor, 3);
-        _playerBombs.Amount = PlayerPrefs.GetFloat(PlayerBombs, 0);
-        _playerBombs.MaxAmount = PlayerPrefs.GetFloat(PlayerMaxBombs, 0);
-
+        _playerBombs.CurrentDamage = PlayerPrefs.GetFloat(PlayerBombsDamage, 10);
+        _playerBombs.Interval.Duration = PlayerPrefs.GetFloat(PlayerBombsCooldown, 4);
     }
 }

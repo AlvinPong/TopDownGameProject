@@ -6,7 +6,6 @@ public class Resupplies : MonoBehaviour
 {
     private Health _health;
     private Armor _armor;
-    private ThrowBombs _bombs;
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +23,9 @@ public class Resupplies : MonoBehaviour
         if (!col.gameObject.CompareTag("Player")) return;
         _health = col.gameObject.GetComponent<Health>();
         _armor = col.gameObject.GetComponent<Armor>();
-        _bombs = col.gameObject.GetComponent<ThrowBombs>();
 
         _health._currentHealth = _health.MaxHealth;
         _armor.CurrentArmor = _armor.MaxArmor;
-        _bombs.Amount = _bombs.MaxAmount;
 
         Vanish();
     }

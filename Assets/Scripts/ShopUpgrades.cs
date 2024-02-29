@@ -140,7 +140,14 @@ public class ShopUpgrades : MonoBehaviour
 
         for (int i = BombCount; i > 0; i--)
         {
-            _bomb.MaxAmount += 1;
+            if(i%2 == 0)
+            {
+                _bomb.DamageUpgrade();
+            }
+            else if (i%2 == 1)
+            {
+                _bomb.CooldownUpgrade();
+            }
         }
         BombCount = 0;
         if(Resupply != null)

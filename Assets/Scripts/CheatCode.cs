@@ -27,6 +27,7 @@ public class CheatCode : MonoBehaviour
 
         _weapon = GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>();
         _weaponHandler = GameObject.FindGameObjectWithTag("Player").GetComponent<WeaponHandler>();
+
     }
 
     // Update is called once per frame
@@ -39,8 +40,9 @@ public class CheatCode : MonoBehaviour
             _health.MaxHealth = 5;
             _armor.CurrentArmor = 3;
             _armor.MaxArmor = 3;
-            _bombs.Amount = 0;
-            _bombs.MaxAmount = 0;
+            _bombs.CurrentDamage = 10;
+            _bombs.bombs.Damage = 10;
+            _bombs.Interval.Duration = 4;
 
             _shopUI.HealthInput = 0;
             _shopUI.ArmorInput = 0;
@@ -59,9 +61,10 @@ public class CheatCode : MonoBehaviour
         {
             _weapon.BulletIndex -= 1;
         }
-            if (Input.GetKeyUp(KeyCode.B) && _weaponHandler.Upgraded == false)
+        if (Input.GetKeyUp(KeyCode.B) && _weaponHandler.Upgraded == false)
         {
             _weaponHandler.Upgraded = true;
         }
+        
     }
 }
