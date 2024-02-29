@@ -15,7 +15,7 @@ public class Projectile : MonoBehaviour
     public Rigidbody2D _rigidbody;
 
 
-    
+    private PlaySound _playsound;
     // Start is called before the first frame update
     void Start()
     {
@@ -76,4 +76,5 @@ public class Projectile : MonoBehaviour
 
         Die();
     }
+    
 }

@@ -17,7 +17,8 @@ public class Bombs : MonoBehaviour
     public GameObject Trigger;
 
     private Rigidbody2D _rigidbody;
-    
+
+    private PlaySound _playsound;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class Bombs : MonoBehaviour
         LifeTime.StartCooldown();
         _rigidbody = GetComponent<Rigidbody2D>();
         _rigidbody.AddRelativeForce(new Vector2(XSpeed, YSpeed));
+        _playsound = GetComponent<PlaySound>();
     }
 
     // Update is called once per frame
@@ -41,6 +43,7 @@ public class Bombs : MonoBehaviour
     }
     private void Explode()
     {
+        BombExplodeSound();
         _rigidbody.velocity = Vector3.zero;
         Trigger.SetActive(true);
     }
@@ -68,7 +71,12 @@ public class Bombs : MonoBehaviour
             targetHealth.Damage(Damage, gameObject);
         }
     }
-    
+
+    private void BombExplodeSound()
+    {
+        _playsound.BombBoom();
+    } 
+
     private void Die()
     {
         Destroy(gameObject);
