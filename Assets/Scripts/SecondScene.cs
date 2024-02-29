@@ -47,6 +47,6 @@ public class SecondScene : MonoBehaviour
         _playerArmor.CurrentArmor = PlayerPrefs.GetFloat(PlayerArmor, 3);
         _playerArmor.MaxArmor = PlayerPrefs.GetFloat(PlayerMaxArmor, 3);
         _playerBombs.CurrentDamage = PlayerPrefs.GetFloat(PlayerBombsDamage, 10);
-        _playerBombs.Interval.Duration = PlayerPrefs.GetFloat(PlayerBombsCooldown, 4);
+        _playerBombs.Interval.Duration = PlayerPrefs.GetFloat(PlayerBombsCooldown, 8);
     }
 }

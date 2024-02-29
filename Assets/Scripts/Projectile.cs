@@ -14,8 +14,6 @@ public class Projectile : MonoBehaviour
 
     public Rigidbody2D _rigidbody;
 
-
-    private PlaySound _playsound;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +21,11 @@ public class Projectile : MonoBehaviour
 
         LifeTime.StartCooldown();
         _rigidbody.AddRelativeForce(new Vector2(Speed, 0f));
+<<<<<<< Updated upstream
         
+=======
+
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
@@ -41,8 +43,11 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject);
     }
 
+<<<<<<< Updated upstream
     
 
+=======
+>>>>>>> Stashed changes
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (!((TargetLayerMask.value & (1 << col.gameObject.layer)) > 0))

@@ -281,7 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDead: 0
   DeathParticles: {fileID: 7936932871254652390, guid: 8a9c83299d3675549883c66a57952a8e, type: 3}
-  Coin: {fileID: 0}
+  Drops: {fileID: 0}
   _canDamage: 1
   Invulnerable:
     Duration: 2
@@ -321,11 +321,11 @@ MonoBehaviour:
   Explosive: {fileID: 4046659108047913799, guid: ad80a5a51362782458691ad3d5967209, type: 3}
   SpawnPos: {fileID: 1087568593}
   Interval:
-    Duration: 1
+    Duration: 8
     CurrentProgress: 0
-  Amount: 5
-  MaxAmount: 0
-  BombAmount: {fileID: 0}
+  BombTimer: {fileID: 0}
+  bombs: {fileID: 0}
+  CurrentDamage: 10
 --- !u!114 &327938621
 MonoBehaviour:
   m_ObjectHideFlags: 0

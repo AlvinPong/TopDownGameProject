@@ -86,7 +86,7 @@ public class ThrowBombs : MonoBehaviour
     }
     public void CooldownUpgrade()
     {
-        Interval.Duration -= 1;
+        Interval.Duration -= 2;
     }
     public void DamageUpgrade()
     {
