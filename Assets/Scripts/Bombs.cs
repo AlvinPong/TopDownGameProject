@@ -17,7 +17,7 @@ public class Bombs : MonoBehaviour
     public GameObject Trigger;
 
     private Rigidbody2D _rigidbody;
-    private PlaySound _playsound;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +35,7 @@ public class Bombs : MonoBehaviour
         else
         {
             Explode();
-            //BombExplodeSound();
+            
             Invoke("Die", Timer);
         }
     }
@@ -68,11 +68,7 @@ public class Bombs : MonoBehaviour
             targetHealth.Damage(Damage, gameObject);
         }
     }
-    private void BombExplodeSound()
-    {
-        //Ask tommy later
-        _playsound.BombBoom();
-    } 
+    
     private void Die()
     {
         Destroy(gameObject);
