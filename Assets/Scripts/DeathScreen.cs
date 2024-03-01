@@ -10,13 +10,14 @@ public class DeathScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _health = GameObject.Find("Player").GetComponent<Health>();
         if (!_deathScreen)
             return;
         if (_deathScreen != null)
         {
             _deathScreen.SetActive(false);
         }
-        _health = GameObject.Find("Player").GetComponent<Health>();
+        
     }
 
     // Update is called once per frame
