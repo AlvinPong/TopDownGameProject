@@ -3,24 +3,18 @@ using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : Movement
 {
     public float Acceleration = 1f;
     private Transform _player;
     protected Vector2 _movingDirection;
-    private Rigidbody2D _rigidbody;
-    public bool FlipAnim
-    {
-        get { return _flipAnim; }
-        set { _flipAnim = value; }
-    }
-    protected bool _flipAnim;
+    
     private Health _health;
 
     public Cooldown Stunned;
     public bool IsStunned = false;
     private Health _enemyHealth;
-    public float DamageForce = 5f;
+    
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -49,11 +43,7 @@ public class EnemyMovement : MonoBehaviour
         _rigidbody.velocity = Vector2.zero;
         IsStunned = true;
     }
-    private void Update()
-    {
-        HandleMovement();
-    }
-    protected void HandleMovement()
+    protected override void HandleMovement()
     {
         if (_health.CurrentHealth <= 0) return;
         _player = GameObject.FindGameObjectWithTag("Player").transform;

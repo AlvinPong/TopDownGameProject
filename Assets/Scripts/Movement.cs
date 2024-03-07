@@ -44,6 +44,7 @@ public class Movement : MonoBehaviour
     }
 
     protected Vector2 _inputDirection;
+    protected Vector2 _inputFacingDirection;
 
     protected bool _isWalking = false;
     protected bool _isFacingUp = false;
@@ -143,26 +144,26 @@ public class Movement : MonoBehaviour
     }   
     protected virtual void CheckDirection()
     {        
-        if (Input.GetKeyDown(KeyCode.UpArrow)) //facing up
+        if (_inputFacingDirection.y > 0) //facing up
         {
             _isFacingUp = true;
             _isFacingDown = false;
             _isFacingSide = false;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow)) //facing down
+        if (_inputFacingDirection.y < 0) //facing down
         {
             _isFacingUp = false;
             _isFacingDown = true;
             _isFacingSide = false;
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) //facing left
+        if (_inputFacingDirection.x < 0) //facing left
         {
             _flipAnim = true;
             _isFacingUp = false;
             _isFacingDown = false;
             _isFacingSide = true;
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow)) //facing right
+        if (_inputFacingDirection.x > 0) //facing right
         {
             _flipAnim = false;
             _isFacingUp = false;
