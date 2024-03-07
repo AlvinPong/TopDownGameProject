@@ -93,7 +93,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1750575821}
-  - component: {fileID: 1750575822}
   m_Layer: 11
   m_Name: SpawnPos
   m_TagString: Untagged
@@ -116,27 +115,6 @@ Transform:
   m_Father: {fileID: 3878643009706888028}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1750575822
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750575820}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &3400927244749711732
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc2cf655d9513d4fa89cda37ca48f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 0
+  Acceleration: 4
   Stunned:
     Duration: 1
     CurrentProgress: 0
@@ -496,7 +474,7 @@ MonoBehaviour:
   projectile: {fileID: 2703435900295087236, guid: 38c898e6c160e1443b8241435025d47e, type: 3}
   SpawnPos: {fileID: 1750575821}
   ShootInterval:
-    Duration: 0.1
+    Duration: 1.5
     CurrentProgress: 0
   _isFlip: 0
 --- !u!1 &3980241383078854632
