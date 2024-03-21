@@ -23,6 +23,7 @@ public class ShopUpgrades : MonoBehaviour
     protected int HealthCount = 0;
     protected int ArmorCount = 0;
     protected int BombCount = 0;
+    public int CurrentCount = 0;
 
     public Image[] HealthUpgrades;
     public Image[] ArmorUpgrades;
@@ -118,7 +119,7 @@ public class ShopUpgrades : MonoBehaviour
         _shopUI.BombInput += 1;
         BuyAmount += Cost;
         BombCount += 1;
-
+        CurrentCount += 1;
     }
     public void Buy()
     {
@@ -138,17 +139,19 @@ public class ShopUpgrades : MonoBehaviour
         }
         ArmorCount = 0;
 
-        for (int i = BombCount; i > 0; i--)
+        for(int i = BombCount; i > 0;i--)
         {
-            if(i%2 == 0)
+            if (CurrentCount % 2 == 0)
             {
                 _bomb.DamageUpgrade();
             }
-            else if (i%2 == 1)
+            else
             {
                 _bomb.CooldownUpgrade();
             }
+            CurrentCount--;
         }
+        CurrentCount += BombCount;
         BombCount = 0;
         if(Resupply != null)
             GameObject.Instantiate(Resupply, ResupplyPos.position, ResupplyPos.rotation);

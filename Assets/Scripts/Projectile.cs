@@ -32,7 +32,8 @@ public class Projectile : MonoBehaviour
         if (LifeTime.CurrentProgress != Cooldown.Progress.Finished)
             return;
 
-       
+        BulletLevel1();
+        BulletLevel3();
         Die();
     }
 
@@ -41,7 +42,25 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
+    public void BulletLevel1()
+    {
+        if (!gameObject.CompareTag("BulletLevel1"))
+        {
+            return;
+        }
+        Debug.Log("Pew Pew");
+        _playsound.BulletLevel1Sound();
+    }
+    //ask tommy later
+    public void BulletLevel3()
+    {
+        if (!gameObject.CompareTag("BulletLevel3"))
+        {
+            return;
+        }
+        
+        _playsound.BulletLevel3Sound();
+    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -74,7 +93,7 @@ public class Projectile : MonoBehaviour
             _enemy.IsStunned = true;
         }
 
-        Die();
+        Die();      
     }
-    
+
 }

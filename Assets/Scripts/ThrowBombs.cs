@@ -19,7 +19,7 @@ public class ThrowBombs : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BombTimer = GameObject.Find("BombAmount").GetComponent<TMP_Text>();
+        BombTimer = GameObject.Find("BombCD").GetComponent<TMP_Text>();
         _movement = GetComponent<Movement>();
         bombs = Explosive.GetComponent<Bombs>();
         
@@ -86,7 +86,7 @@ public class ThrowBombs : MonoBehaviour
     }
     public void CooldownUpgrade()
     {
-        Interval.Duration -= 1;
+        Interval.Duration -= 2;
     }
     public void DamageUpgrade()
     {

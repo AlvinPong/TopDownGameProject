@@ -17,6 +17,10 @@ public class Weapon : MonoBehaviour
     public int BulletIndex = 0;
 
     
+
+    
+
+    
     public bool IsFlip
     {
         set { _isFlip = value; }
@@ -63,6 +67,7 @@ public class Weapon : MonoBehaviour
             bullet1.GetComponent<Projectile>().Speed *= -1;
             bullet2.GetComponent<Projectile>().Speed *= -1;
         }
+        
 
         ShootInterval.StartCooldown();
 
@@ -72,7 +77,7 @@ public class Weapon : MonoBehaviour
         if (BulletType[BulletIndex + 1] == null) return;
         BulletIndex += 1;
     }
-    public void IntervalUpgrade()
+    public virtual void IntervalUpgrade()
     {
         if(BulletIndex == 0 || BulletIndex == 1)
         {

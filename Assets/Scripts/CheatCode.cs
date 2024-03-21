@@ -23,6 +23,7 @@ public class CheatCode : MonoBehaviour
         _armor = GameObject.FindGameObjectWithTag("Player").GetComponent<Armor>();
         _bombs = GameObject.FindGameObjectWithTag("Player").GetComponent<ThrowBombs>();
         _shopUI = GameObject.Find("Shop").GetComponentInChildren<ShopUI>();
+
         _scoreManager = GameObject.FindObjectOfType<ScoreManager>();
 
         _weapon = GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>();
@@ -42,11 +43,12 @@ public class CheatCode : MonoBehaviour
             _armor.MaxArmor = 3;
             _bombs.CurrentDamage = 10;
             _bombs.bombs.Damage = 10;
-            _bombs.Interval.Duration = 4;
+            _bombs.Interval.Duration = 8;
 
             _shopUI.HealthInput = 0;
             _shopUI.ArmorInput = 0;
             _shopUI.BombInput = 0;
+            
             PlayerPrefs.SetInt(_shopUI.HealthUpgrade, 0);
             PlayerPrefs.SetInt(_shopUI.ArmorUpgrade, 0);
             PlayerPrefs.SetInt(_shopUI.BombUpgrade, 0);
