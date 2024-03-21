@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-
+        _playsound = GetComponent<PlaySound>();
         LifeTime.StartCooldown();
         _rigidbody.AddRelativeForce(new Vector2(Speed, 0f));
         
@@ -32,8 +32,8 @@ public class Projectile : MonoBehaviour
         if (LifeTime.CurrentProgress != Cooldown.Progress.Finished)
             return;
 
-        BulletLevel1();
-        BulletLevel3();
+        //BulletLevel1();
+        //BulletLevel3();
         Die();
     }
 
