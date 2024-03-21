@@ -187,4 +187,14 @@ public class PlaySound : MonoBehaviour
 
         soundManager.Play("BulletProjectileLevel3");
     }
+    public void WarningSound()
+    {
+        if (soundManager == null)
+        {
+            return;
+        }
+
+
+        soundManager.Play("Warning sound");
+    }
 }

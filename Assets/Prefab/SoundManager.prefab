@@ -140,3 +140,8 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1.55
     source: {fileID: 0}
+  - name: Warning sound
+    clip: {fileID: 8300000, guid: 1dfa30f7d20332a43956c36652a754b7, type: 3}
+    volume: 1
+    pitch: 1.55
+    source: {fileID: 0}
