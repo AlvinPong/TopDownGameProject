@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-
+        _playsound = GetComponent<PlaySound>();
         LifeTime.StartCooldown();
         _rigidbody.AddRelativeForce(new Vector2(Speed, 0f));
         
