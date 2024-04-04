@@ -32,8 +32,8 @@ public class Projectile : MonoBehaviour
         if (LifeTime.CurrentProgress != Cooldown.Progress.Finished)
             return;
 
-        BulletLevel1();
-        BulletLevel3();
+        //BulletLevel1();
+        //BulletLevel3();
         Die();
     }
 
@@ -49,7 +49,8 @@ public class Projectile : MonoBehaviour
             return;
         }
         Debug.Log("Pew Pew");
-        _playsound.BulletLevel1Sound();
+        //_playsound.BulletLevel1Sound();
+      
     }
     //ask tommy later
     public void BulletLevel3()

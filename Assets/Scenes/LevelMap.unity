@@ -4545,6 +4545,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 237967731917411885, guid: 497d9ab35a5f19847ab95df897abe4d6, type: 3}
+      propertyPath: StartingInterval
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 237967731917411886, guid: 497d9ab35a5f19847ab95df897abe4d6, type: 3}
       propertyPath: m_Name
       value: Spawner
@@ -4986,7 +4990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8915225337567419497, guid: 25ba4bd32a2ae5b4f88e1d8556cd0ee8, type: 3}
       propertyPath: MaxPerWave
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8915225337567419497, guid: 25ba4bd32a2ae5b4f88e1d8556cd0ee8, type: 3}
       propertyPath: MaxPerZombie
@@ -5338,7 +5342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4487504353108668515, guid: 7f8c94a88ecd710468187d148ab1b0f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.99
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 4487504353108668515, guid: 7f8c94a88ecd710468187d148ab1b0f4, type: 3}
       propertyPath: m_LocalPosition.z

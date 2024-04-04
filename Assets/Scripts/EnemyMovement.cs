@@ -21,6 +21,7 @@ public class EnemyMovement : MonoBehaviour
     public bool IsStunned = false;
     private Health _enemyHealth;
     public float DamageForce = 5f;
+    public bool IsInRageState = false;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -32,6 +33,10 @@ public class EnemyMovement : MonoBehaviour
             _enemyHealth.OnReset += ResetMove;
         }
     }
+
+  
+
+
     private void OnDisable()
     {
         if (_enemyHealth != null)
