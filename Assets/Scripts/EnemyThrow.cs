@@ -15,6 +15,8 @@ public class EnemyThrow : MonoBehaviour
     public Transform SpawnPos;
     public Cooldown ShootInterval;
 
+
+
     public bool IsFlip
     {
         set { _isFlip = value; }
@@ -73,5 +75,7 @@ public class EnemyThrow : MonoBehaviour
             bullet.transform.localScale = new Vector3(-1, 1, 1);
         }
         ShootInterval.StartCooldown();
+
+
     }
 }

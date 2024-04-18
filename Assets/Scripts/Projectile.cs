@@ -49,7 +49,8 @@ public class Projectile : MonoBehaviour
             return;
         }
         Debug.Log("Pew Pew");
-        _playsound.BulletLevel1Sound();
+        //_playsound.BulletLevel1Sound();
+      
     }
     //ask tommy later
     public void BulletLevel3()
