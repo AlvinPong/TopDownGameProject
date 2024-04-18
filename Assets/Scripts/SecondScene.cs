@@ -16,6 +16,13 @@ public class SecondScene : MonoBehaviour
     private Armor _playerArmor;
     private ThrowBombs _playerBombs;
 
+    public string PlayerCoins = "PlayerCurrentCoins";
+
+    public string WeaponUpgrade = "CurrentUpgrade";
+    public string BulletUpgrade = "CurrentBullet";
+
+    private WeaponHandler _weaponHandler;
+    private Weapon _weapon;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +31,9 @@ public class SecondScene : MonoBehaviour
         _playerBombs = GameObject.FindGameObjectWithTag("Player").GetComponent<ThrowBombs>();
 
         SetPlayer();
+
+        _weaponHandler = GameObject.FindGameObjectWithTag("Player").GetComponent<WeaponHandler>();
+        _weapon = GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>();
     }
 
     // Update is called once per frame
@@ -39,6 +49,7 @@ public class SecondScene : MonoBehaviour
         PlayerPrefs.SetFloat(PlayerMaxArmor, _playerArmor.MaxArmor);
         PlayerPrefs.SetFloat(PlayerBombsDamage, _playerBombs.CurrentDamage);
         PlayerPrefs.SetFloat(PlayerBombsCooldown, _playerBombs.Interval.Duration);
+        PlayerPrefs.SetInt(BulletUpgrade, _weapon.BulletIndex);
     }
     public void SetPlayer()
     {

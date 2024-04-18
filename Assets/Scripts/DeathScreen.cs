@@ -7,9 +7,12 @@ public class DeathScreen : MonoBehaviour
     private Health _health;
     public GameObject _deathScreen;
     public float Cooldown = 3f;
+
+    private SceneLoader _sceneLoader;
     // Start is called before the first frame update
     void Start()
     {
+        _sceneLoader = GameObject.Find("GameManager").GetComponent<SceneLoader>();
         _health = GameObject.Find("Player").GetComponent<Health>();
         if (!_deathScreen)
             return;
@@ -30,6 +33,6 @@ public class DeathScreen : MonoBehaviour
     }
     private void ActivateScreen()
     {
-        _deathScreen.SetActive(true);
+        _sceneLoader.LoadDeathScene();
     }
 }
