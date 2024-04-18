@@ -18,6 +18,8 @@ public class SceneLoader : MonoBehaviour
     private SecondScene _secondScene;
 
     private ScoreManager _scoreManager;
+
+    public int Cost = 100;
     private void Start()
     {
         _secondScene = GetComponent<SecondScene>();
@@ -56,24 +58,28 @@ public class SceneLoader : MonoBehaviour
         if (Map2 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map2);
+        _scoreManager.CoinAmount -= Cost;
     }
     public void LaodMap3()
     {
         if (Map3 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map3);
+        _scoreManager.CoinAmount -= Cost;
     }
     public void LaodMap4()
     {
         if (Map4 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map4);
+        _scoreManager.CoinAmount -= Cost;
     }
     public void LaodMap5()
     {
         if (Map5 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map5);
+        _scoreManager.CoinAmount -= Cost;
     }
 
     public void LoadMap6()
@@ -81,5 +87,6 @@ public class SceneLoader : MonoBehaviour
         if (Map6 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map6);
+        _scoreManager.CoinAmount -= Cost;
     }
 }
