@@ -1036,7 +1036,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1934669411}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LaodMap1
+        m_MethodName: LoadMap1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1774,7 +1774,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1934669411}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LaodMap2
+        m_MethodName: LoadMap2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3058,7 +3058,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1934669411}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LaodMap3
+        m_MethodName: LoadMap3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4420,7 +4420,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1934669411}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LaodMap4
+        m_MethodName: LoadMap4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
