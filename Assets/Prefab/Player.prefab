@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &174859523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 174859524}
+  m_Layer: 6
+  m_Name: LGunPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &174859524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174859523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.156, y: -0.109, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4487504353108668515}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &232873301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232873302}
+  m_Layer: 6
+  m_Name: RGunPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &232873302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232873301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.159, y: -0.109, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4487504353108668515}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1087568592
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +250,8 @@ Transform:
   - {fileID: 4487504352951383052}
   - {fileID: 8546404094263117878}
   - {fileID: 1087568593}
+  - {fileID: 232873302}
+  - {fileID: 174859524}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -265,6 +329,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentWeapon: {fileID: 0}
+  RightWeaponPosition: {fileID: 232873302}
+  LeftWeaponPosition: {fileID: 174859524}
   FirePoint: {fileID: 8546404094263117878}
   Upgraded: 0
 --- !u!114 &1242604382
@@ -289,7 +355,7 @@ MonoBehaviour:
   Stun:
     Duration: 0
     CurrentProgress: 0
-  _currentHealth: 10
+  _currentHealth: 5
   MaxHealth: 5
   _enemyHealth: {fileID: 0}
 --- !u!114 &1618892105
@@ -304,8 +370,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5843d0cb69759054a97b0758d9ab8cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentArmor: 10
-  MaxArmor: 0
+  CurrentArmor: 3
+  MaxArmor: 3
 --- !u!114 &834486060
 MonoBehaviour:
   m_ObjectHideFlags: 0
