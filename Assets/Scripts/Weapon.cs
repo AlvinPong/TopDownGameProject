@@ -16,11 +16,6 @@ public class Weapon : MonoBehaviour
     public GameObject[] BulletType;
     public int BulletIndex = 0;
 
-    
-
-    
-
-    
     public bool IsFlip
     {
         set { _isFlip = value; }

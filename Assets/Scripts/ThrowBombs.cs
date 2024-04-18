@@ -29,6 +29,7 @@ public class ThrowBombs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HandleBomb();
         if (BombTimer != null)
         {
             if (Interval.CurrentProgress == Cooldown.Progress.Ready)
@@ -51,6 +52,10 @@ public class ThrowBombs : MonoBehaviour
         {
             ThrowExplosive();
         }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            ThrowExplosive();
+        }
     }
     private void ThrowExplosive()
     {
@@ -61,26 +66,26 @@ public class ThrowBombs : MonoBehaviour
 
         
 
-        if (_movement.IsFacingUp)
-        {
-            explosive.GetComponent<Bombs>().XSpeed *= 0;
-            explosive.GetComponent<Bombs>().YSpeed *= 1;
-        }
-        if (_movement.IsFacingDown)
-        {
-            explosive.GetComponent<Bombs>().XSpeed *= 0;
-            explosive.GetComponent<Bombs>().YSpeed *= -1;
-        }
-        if(_movement.IsFacingSide && _movement.FlipAnim)
-        {
-            explosive.GetComponent<Bombs>().XSpeed *= -1;
-            explosive.GetComponent<Bombs>().YSpeed *= 0;
-        }
-        if(_movement.IsFacingSide && !_movement.FlipAnim)
-        {
-            explosive.GetComponent<Bombs>().XSpeed *= 1;
-            explosive.GetComponent<Bombs>().YSpeed *= 0;
-        }
+        //if (_movement.IsFacingUp)
+        //{
+        //    explosive.GetComponent<Bombs>().XSpeed *= 0;
+        //    explosive.GetComponent<Bombs>().YSpeed *= 1;
+        //}
+        //if (_movement.IsFacingDown)
+        //{
+        //    explosive.GetComponent<Bombs>().XSpeed *= 0;
+        //    explosive.GetComponent<Bombs>().YSpeed *= -1;
+        //}
+        //if(_movement.IsFacingSide && _movement.FlipAnim)
+        //{
+        //    explosive.GetComponent<Bombs>().XSpeed *= -1;
+        //    explosive.GetComponent<Bombs>().YSpeed *= 0;
+        //}
+        //if(_movement.IsFacingSide && !_movement.FlipAnim)
+        //{
+        //    explosive.GetComponent<Bombs>().XSpeed *= 1;
+        //    explosive.GetComponent<Bombs>().YSpeed *= 0;
+        //}
 
         Interval.StartCooldown();
     }
@@ -96,4 +101,15 @@ public class ThrowBombs : MonoBehaviour
             CurrentDamage += 10;
         }
     }   
+    public void HandleBomb()
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 bombPos = SpawnPos.position;
+        Vector2 direction = mousePos - bombPos;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        
+        SpawnPos.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 45));
+
+    }
 }

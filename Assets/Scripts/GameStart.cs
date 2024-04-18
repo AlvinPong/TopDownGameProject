@@ -15,11 +15,13 @@ public class GameStart : MonoBehaviour
     public string ArmorUpgrade = "ShopArmorUpgrade";
     public string BombUpgrade = "ShopBombUpgrade";
 
+    public string SavedCoins = "PlayerSavedCoins";
     // Start is called before the first frame update
     void Start()
     {
         PlayerSetUp();
         ShopSetUp();
+        ScoreSetUp();
     }
 
     // Update is called once per frame
@@ -41,5 +43,9 @@ public class GameStart : MonoBehaviour
         PlayerPrefs.SetInt(HealthUpgrade, 0);
         PlayerPrefs.SetInt(ArmorUpgrade, 0);
         PlayerPrefs.SetInt(BombUpgrade, 0);
+    }
+    public void ScoreSetUp()
+    {
+        PlayerPrefs.SetInt(SavedCoins, 0);
     }
 }

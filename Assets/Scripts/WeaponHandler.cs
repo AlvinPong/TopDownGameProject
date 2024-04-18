@@ -6,8 +6,8 @@ public class WeaponHandler : MonoBehaviour
 {
 
     public Weapon CurrentWeapon;
-    //public Transform RightWeaponPosition;
-    //public Transform LeftWeaponPosition;
+    public Transform RightWeaponPosition;
+    public Transform LeftWeaponPosition;
     public Transform FirePoint;
 
     protected bool _tryShoot = false;
@@ -27,56 +27,67 @@ public class WeaponHandler : MonoBehaviour
     protected virtual void  Update()
     {        
         HandleInput();
-        ChangeDirection();      
+        HandleWeapon();
+        //ChangeDirection();      
     }
 
     protected virtual void HandleInput()
     {
         if (CurrentWeapon == null) return;
         
-        //if (Input.GetButtonDown("Fire1"))
-        //    _tryShoot = true;
-        //if (Input.GetButtonUp("Fire1"))
-        //    _tryShoot = false;
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (_tryShoot)
-            {
-                _tryShoot = false;
-                return;
-            }
-            if (!_tryShoot)
-            {
-                _tryShoot = true;
-                return;
-            }
-        }
+        if (Input.GetButtonDown("Fire1"))
+            _tryShoot = true;
+        if (Input.GetButtonUp("Fire1"))
+            _tryShoot = false;
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    if (_tryShoot)
+        //    {
+        //        _tryShoot = false;
+        //        return;
+        //    }
+        //    if (!_tryShoot)
+        //    {
+        //        _tryShoot = true;
+        //        return;
+        //    }
+        //}
     }
-    
-    //protected virtual void  HandleWeapon()
-    //{
-    //    if (CurrentWeapon == null)
-    //        return;
 
-    //    Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    protected virtual void HandleWeapon()
+    {
+        if (CurrentWeapon == null)
+            return;
 
-    //    bool isFlip = (mousePos.x > transform.position.x) ? false : true;
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-    //    Vector2 gunPos =  isFlip ?  LeftWeaponPosition.position : RightWeaponPosition.position;
-    //    Vector2 direction = isFlip ? gunPos - mousePos: mousePos - gunPos;
-        
-    //    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-    //    CurrentWeapon.transform.position =  gunPos;
-    //    CurrentWeapon.transform.localScale = isFlip ? new Vector3(-1,1,1) : Vector3.one;
-    //    CurrentWeapon.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        bool isFlip = (mousePos.x > transform.position.x) ? false : true;
 
-    //    CurrentWeapon.IsFlip = isFlip;
+        Vector2 gunPos = isFlip ? LeftWeaponPosition.position : RightWeaponPosition.position;
+        Vector2 direction = isFlip ? gunPos - mousePos : mousePos - gunPos;
 
-    //    _movement.FlipAnim = isFlip;
-        
-    //    if (_tryShoot)
-    //        CurrentWeapon.Shoot();        
-    //}
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        CurrentWeapon.transform.position = gunPos;
+        CurrentWeapon.transform.localScale = isFlip ? new Vector3(-1, 1, 1) : Vector3.one;
+        CurrentWeapon.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+        CurrentWeapon.IsFlip = isFlip;
+
+        _movement.FlipAnim = isFlip;
+
+        if (_movement.IsFacingUp)
+        {
+            CurrentWeapon.GetComponentInChildren<SpriteRenderer>().sortingOrder = -1;
+        } else
+        {
+            CurrentWeapon.GetComponentInChildren<SpriteRenderer>().sortingOrder = 1;
+        }
+
+            if (_tryShoot && Upgraded == false)
+            CurrentWeapon.Shoot();
+        if (_tryShoot && Upgraded == true)
+            CurrentWeapon.DoubleShoot();
+    }
 
     public void EquipWeapon(Weapon weapon)
     {

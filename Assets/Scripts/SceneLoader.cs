@@ -14,6 +14,8 @@ public class SceneLoader : MonoBehaviour
     public string Map4 = "";
     public string Map5 = "";
     public string Map6 = "";
+    public string DeathScene = "";
+    public string VictoryScene = "";
 
     private SecondScene _secondScene;
 
@@ -47,34 +49,34 @@ public class SceneLoader : MonoBehaviour
         Debug.Log("Quitting Game");
     }
 
-    public void LaodMap1()
+    public void LoadMap1()
     {
         if (Map1 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map1);
     }
-    public void LaodMap2()
+    public void LoadMap2()
     {
         if (Map2 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map2);
         _scoreManager.CoinAmount -= Cost;
     }
-    public void LaodMap3()
+    public void LoadMap3()
     {
         if (Map3 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map3);
         _scoreManager.CoinAmount -= Cost;
     }
-    public void LaodMap4()
+    public void LoadMap4()
     {
         if (Map4 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map4);
         _scoreManager.CoinAmount -= Cost;
     }
-    public void LaodMap5()
+    public void LoadMap5()
     {
         if (Map5 == "") return;
         _secondScene.SavePlayerStats();
@@ -88,5 +90,17 @@ public class SceneLoader : MonoBehaviour
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map6);
         _scoreManager.CoinAmount -= Cost;
+    }
+
+    public void LoadDeathScene()
+    {
+        if (DeathScene == "") return;
+        SceneManager.LoadScene(DeathScene);
+    }
+
+    public void LoadVictoryScene()
+    {
+        if (VictoryScene == "") return;
+        SceneManager.LoadScene(VictoryScene);
     }
 }

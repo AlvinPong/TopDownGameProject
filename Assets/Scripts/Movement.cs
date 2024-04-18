@@ -112,7 +112,8 @@ public class Movement : MonoBehaviour
     void Update()
     {
         HandleInput();
-        CheckDirection();
+        //CheckDirection();
+        CheckDirectionByMouse();
     }
     private void FixedUpdate()
     {
@@ -171,5 +172,60 @@ public class Movement : MonoBehaviour
             _isFacingSide = true;
         }
 
+    }
+    protected virtual void CheckDirectionByMouse()
+    {
+        if (!gameObject.CompareTag("Player")) return;
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 playerPos = transform.position;
+        Vector2 Direction = mousePos - playerPos;
+        Direction = Direction.normalized;
+
+        var angle = Mathf.Atan2(Direction.x, Direction.y) * Mathf.Rad2Deg;
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            //Debug.Log(Direction.x);
+            //Debug.Log(Direction.y);
+
+            Debug.DrawRay(playerPos, Direction, Color.red, 1f);
+
+            //Debug.Log(angle);
+        }
+        //transform.up = Direction;
+
+        //angle that is facing up
+        if (-45 < angle && angle <= 45)
+        {
+            _isFacingUp = true;
+        }
+        else
+        {
+            _isFacingUp = false;
+        }
+        if (135 < angle || angle <= -135)
+        {
+            _isFacingDown = true;
+        }
+        else
+        {
+            _isFacingDown = false;
+        }
+        if ((45 < angle && angle <= 135) || (-135 < angle && angle <= -45))
+        {
+            _isFacingSide = true;
+        }
+        else
+        {
+            _isFacingSide = false;
+        }
+        if (-135 < angle && angle <= -45)
+        {
+            _flipAnim = true;
+        }
+        else
+        {
+            _flipAnim = false;
+        }
     }
 }
