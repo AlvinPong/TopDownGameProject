@@ -2438,6 +2438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirstButton: {fileID: 571584985}
   SecondButton: {fileID: 75855673}
+  Cost: 100
 --- !u!61 &763131286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2615,6 +2616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirstButton: {fileID: 2070458210}
   SecondButton: {fileID: 571584985}
+  Cost: 100
 --- !u!61 &805026171
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3721,6 +3723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirstButton: {fileID: 526625998}
   SecondButton: {fileID: 2070458210}
+  Cost: 100
 --- !u!61 &1267005024
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4070,6 +4073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirstButton: {fileID: 526625998}
   SecondButton: {fileID: 75855673}
+  Cost: 100
 --- !u!61 &1363721920
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5487,7 +5491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8416453373847206669, guid: b301b4801996cee47ac372e4a5767e03, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b301b4801996cee47ac372e4a5767e03, type: 3}
