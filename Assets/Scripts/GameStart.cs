@@ -16,12 +16,15 @@ public class GameStart : MonoBehaviour
     public string BombUpgrade = "ShopBombUpgrade";
 
     public string SavedCoins = "PlayerSavedCoins";
+
+    public string BulletUpgrade = "CurrentBullet";
     // Start is called before the first frame update
     void Start()
     {
         PlayerSetUp();
         ShopSetUp();
         ScoreSetUp();
+        PlayerPrefs.SetInt(BulletUpgrade, 0);
     }
 
     // Update is called once per frame

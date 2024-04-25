@@ -158,7 +158,7 @@ MonoBehaviour:
   YSpeed: 500
   TargetLayerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 2176
   LifeTime:
     Duration: 1
     CurrentProgress: 0

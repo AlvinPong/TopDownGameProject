@@ -28,7 +28,7 @@ public class WeaponHandler : MonoBehaviour
     {        
         HandleInput();
         HandleWeapon();
-        //ChangeDirection();      
+        //ChangeDirection();
     }
 
     protected virtual void HandleInput()

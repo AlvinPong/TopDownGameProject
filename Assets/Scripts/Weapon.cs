@@ -26,10 +26,10 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        IntervalUpgrade();
         if (ShootInterval.CurrentProgress != Cooldown.Progress.Finished)
             return;
         ShootInterval.CurrentProgress = Cooldown.Progress.Ready;
-        IntervalUpgrade();
     }
     public void Shoot()
     {

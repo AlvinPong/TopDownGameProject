@@ -365,6 +365,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1541498448794474408, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
+      propertyPath: Acceleration
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3878643009706888028, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -415,6 +419,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
+--- !u!1 &6013184812781705344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3878643009706888029, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
+  m_PrefabInstance: {fileID: 7395098596753871837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8260958172433166950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6013184812781705344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d58cae235053e40af9300fce425c0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 2703435900295087236, guid: 38c898e6c160e1443b8241435025d47e, type: 3}
+  SpawnPos: {fileID: 6013184812781705345}
+  ShootInterval:
+    Duration: 5
+    CurrentProgress: 0
+  _isFlip: 0
+--- !u!4 &6013184812781705345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3878643009706888028, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
+  m_PrefabInstance: {fileID: 7395098596753871837}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7395098598092702549 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1355747464, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}

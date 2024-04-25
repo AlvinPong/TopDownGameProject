@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int CoinAmount = 100;
+    public int CoinAmount;
     public TMP_Text CoinText;
     public TMP_Text ShopCoinText;
 

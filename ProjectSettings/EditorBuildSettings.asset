@@ -35,4 +35,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterDied.unity
     guid: 55d4fd143d5cf9b40bb69052af944e49
+  - enabled: 1
+    path: Assets/Scenes/BEGGAR Introduction.unity
+    guid: f978bb56778cb8b4687738efceb3e947
+  - enabled: 1
+    path: Assets/Scenes/BOB Introdution.unity
+    guid: 44fa7b1f5b4d0f947a323f46723bba60
+  - enabled: 1
+    path: Assets/Scenes/Zombie Introduction Police.unity
+    guid: 2e4d2487023214c4c86f432c8606c50e
+  - enabled: 1
+    path: Assets/Scenes/Zombie Introdution Samurai.unity
+    guid: 32cf3a42fc4b0494095194fa026230fe
+  - enabled: 1
+    path: Assets/Scenes/Zombie Introdution ALL.unity
+    guid: 0a6e9ff0cdcdc8746b32a0dbe5c44a59
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: ebfe935133d3ac146b750597089ce56c
   m_configObjects: {}

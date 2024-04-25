@@ -5,7 +5,7 @@ using UnityEngine;
 public class DeathScreen : MonoBehaviour
 {
     private Health _health;
-    public GameObject _deathScreen;
+    
     public float Cooldown = 3f;
 
     private SceneLoader _sceneLoader;
@@ -14,12 +14,7 @@ public class DeathScreen : MonoBehaviour
     {
         _sceneLoader = GameObject.Find("GameManager").GetComponent<SceneLoader>();
         _health = GameObject.Find("Player").GetComponent<Health>();
-        if (!_deathScreen)
-            return;
-        if (_deathScreen != null)
-        {
-            _deathScreen.SetActive(false);
-        }
+        
         
     }
 

@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6173842965744391572, guid: 65b2d9337e1341e42a89baa0de74be9f, type: 3}
       propertyPath: Damage
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6173842965744391573, guid: 65b2d9337e1341e42a89baa0de74be9f, type: 3}
       propertyPath: MaxHealth

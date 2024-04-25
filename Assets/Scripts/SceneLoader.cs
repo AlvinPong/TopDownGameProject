@@ -16,12 +16,18 @@ public class SceneLoader : MonoBehaviour
     public string Map6 = "";
     public string DeathScene = "";
     public string VictoryScene = "";
+    public string Credits = "";
 
     private SecondScene _secondScene;
 
     private ScoreManager _scoreManager;
 
-    public int Cost = 100;
+    public int Cost = 1500;
+    public int Map2Cost = 200;
+    public int Map3Cost = 50;
+    public int Map4Cost = 150;
+    public int Map5Cost = 100;
+
     private void Start()
     {
         _secondScene = GetComponent<SecondScene>();
@@ -60,28 +66,28 @@ public class SceneLoader : MonoBehaviour
         if (Map2 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map2);
-        _scoreManager.CoinAmount -= Cost;
+        _scoreManager.CoinAmount -= Map2Cost;
     }
     public void LoadMap3()
     {
         if (Map3 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map3);
-        _scoreManager.CoinAmount -= Cost;
+        _scoreManager.CoinAmount -= Map3Cost;
     }
     public void LoadMap4()
     {
         if (Map4 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map4);
-        _scoreManager.CoinAmount -= Cost;
+        _scoreManager.CoinAmount -= Map4Cost;
     }
     public void LoadMap5()
     {
         if (Map5 == "") return;
         _secondScene.SavePlayerStats();
         SceneManager.LoadScene(Map5);
-        _scoreManager.CoinAmount -= Cost;
+        _scoreManager.CoinAmount -= Map5Cost;
     }
 
     public void LoadMap6()
@@ -101,6 +107,15 @@ public class SceneLoader : MonoBehaviour
     public void LoadVictoryScene()
     {
         if (VictoryScene == "") return;
-        SceneManager.LoadScene(VictoryScene);
+        if (_scoreManager.CoinAmount <= Cost) return;
+        else
+        {
+            SceneManager.LoadScene(VictoryScene);
+        }
+    }
+    public void LoadCredit()
+    {
+        if (Credits == "") return;
+        SceneManager.LoadScene(Credits);
     }
 }

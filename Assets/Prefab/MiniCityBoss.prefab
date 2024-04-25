@@ -464,3 +464,31 @@ MonoBehaviour:
   Lifetime:
     Duration: 3
     CurrentProgress: 0
+--- !u!1 &8372521408548332912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3878643009706888029, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
+  m_PrefabInstance: {fileID: 4747531337081155117}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-8792622615490969415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372521408548332912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d58cae235053e40af9300fce425c0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 2703435900295087236, guid: 38c898e6c160e1443b8241435025d47e, type: 3}
+  SpawnPos: {fileID: 8372521408548332913}
+  ShootInterval:
+    Duration: 5
+    CurrentProgress: 0
+  _isFlip: 0
+--- !u!4 &8372521408548332913 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3878643009706888028, guid: 9cccdd3f5a17a034886d8f6eb4645696, type: 3}
+  m_PrefabInstance: {fileID: 4747531337081155117}
+  m_PrefabAsset: {fileID: 0}
