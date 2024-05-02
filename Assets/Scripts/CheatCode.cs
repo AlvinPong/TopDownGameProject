@@ -53,7 +53,7 @@ public class CheatCode : MonoBehaviour
             PlayerPrefs.SetInt(_shopUI.ArmorUpgrade, 0);
             PlayerPrefs.SetInt(_shopUI.BombUpgrade, 0);
 
-            _scoreManager.CoinAmount = 100;
+            _scoreManager.CoinAmount = 0;
         }
         if (Input.GetKeyUp(KeyCode.C) && _weapon.BulletIndex < 4)
         {
@@ -63,10 +63,17 @@ public class CheatCode : MonoBehaviour
         {
             _weapon.BulletIndex -= 1;
         }
-        if (Input.GetKeyUp(KeyCode.B) && _weaponHandler.Upgraded == false)
+        if (Input.GetKeyUp(KeyCode.B) && _weaponHandler.UpgradeInt == 0)
         {
-            _weaponHandler.Upgraded = true;
+            _weaponHandler.UpgradeInt = 1;
         }
-        
+        if (Input.GetKeyUp(KeyCode.N) && _weaponHandler.UpgradeInt == 1)
+        {
+            _weaponHandler.UpgradeInt = 0;
+        }
+        if (Input.GetKeyUp(KeyCode.M))
+        {
+            _scoreManager.CoinAmount += 1500;
+        }
     }
 }

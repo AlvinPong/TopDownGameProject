@@ -401,8 +401,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278211839
-  m_fontColor: {r: 1, g: 0.33053562, b: 0, a: 1}
+    rgba: 4281812871
+  m_fontColor: {r: 0.5283019, g: 0.27783123, b: 0.21680315, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -805,8 +805,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278211839
-  m_fontColor: {r: 1, g: 0.33053562, b: 0, a: 1}
+    rgba: 4281812871
+  m_fontColor: {r: 0.5294118, g: 0.2784314, b: 0.21568629, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1227,8 +1227,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278211839
-  m_fontColor: {r: 1, g: 0.33053562, b: 0, a: 1}
+    rgba: 4281812871
+  m_fontColor: {r: 0.5294118, g: 0.2784314, b: 0.21568629, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1816,7 +1816,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Damien Lee
+  m_text: Damien Teng
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db18bb7f0cd44f34dbc8ef8b97ceeccb, type: 2}
   m_sharedMaterial: {fileID: 2803647258006112427, guid: db18bb7f0cd44f34dbc8ef8b97ceeccb, type: 2}

@@ -18,6 +18,8 @@ public class GameStart : MonoBehaviour
     public string SavedCoins = "PlayerSavedCoins";
 
     public string BulletUpgrade = "CurrentBullet";
+
+    public string WeaponUpgraded = "WeaponUpgraded";
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class GameStart : MonoBehaviour
         ShopSetUp();
         ScoreSetUp();
         PlayerPrefs.SetInt(BulletUpgrade, 0);
+        PlayerPrefs.SetInt(WeaponUpgraded, 0);
     }
 
     // Update is called once per frame

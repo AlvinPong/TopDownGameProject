@@ -144,7 +144,7 @@ public class Health : MonoBehaviour
 
         if(_currentHealth <= 3)
         {
-            Debug.Log("health low, tyr play sound");
+            //Debug.Log("health low, tyr play sound");
 
             _playsound.LowHealth();
         }

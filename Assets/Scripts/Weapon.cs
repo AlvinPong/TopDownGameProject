@@ -69,7 +69,7 @@ public class Weapon : MonoBehaviour
     }
     public void BulletUpgrade()
     {
-        if (BulletType[BulletIndex + 1] == null) return;
+        if (BulletIndex + 1 == 5) return;
         BulletIndex += 1;
     }
     public virtual void IntervalUpgrade()

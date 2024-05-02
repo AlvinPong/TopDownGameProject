@@ -18,7 +18,7 @@ public class SecondScene : MonoBehaviour
 
     public string PlayerCoins = "PlayerCurrentCoins";
 
-    public string WeaponUpgrade = "CurrentUpgrade";
+    public string WeaponUpgraded = "WeaponUpgraded";
     public string BulletUpgrade = "CurrentBullet";
 
     private WeaponHandler _weaponHandler;
@@ -49,7 +49,7 @@ public class SecondScene : MonoBehaviour
         PlayerPrefs.SetFloat(PlayerBombsDamage, _playerBombs.CurrentDamage);
         PlayerPrefs.SetFloat(PlayerBombsCooldown, _playerBombs.Interval.Duration);
         PlayerPrefs.SetInt(BulletUpgrade, _weapon.BulletIndex);
-
+        PlayerPrefs.SetInt(WeaponUpgraded,_weaponHandler.UpgradeInt);
 
     }
     public void SetPlayer()

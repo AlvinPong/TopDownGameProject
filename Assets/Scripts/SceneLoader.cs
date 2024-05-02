@@ -107,7 +107,7 @@ public class SceneLoader : MonoBehaviour
     public void LoadVictoryScene()
     {
         if (VictoryScene == "") return;
-        if (_scoreManager.CoinAmount <= Cost) return;
+        if (_scoreManager.CoinAmount < Cost) return;
         else
         {
             SceneManager.LoadScene(VictoryScene);

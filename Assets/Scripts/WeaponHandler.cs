@@ -14,18 +14,30 @@ public class WeaponHandler : MonoBehaviour
    
     protected Movement _movement;
 
+    public int UpgradeInt = 0;
     public bool Upgraded = false;
+
+    public string WeaponUpgraded = "WeaponUpgraded";
         // Start is called before the first frame update
     void Start()
     {
+        UpgradeInt = PlayerPrefs.GetInt(WeaponUpgraded, 0);
         _movement = GetComponent<Movement>();
         if (CurrentWeapon == null)
-            return;        
+            return;
     }
 
     // Update is called once per frame
     protected virtual void  Update()
-    {        
+    {
+        if (UpgradeInt == 0)
+        {
+            Upgraded = false;
+        }
+        else if (UpgradeInt == 1)
+        {
+            Upgraded = true;
+        }
         HandleInput();
         HandleWeapon();
         //ChangeDirection();

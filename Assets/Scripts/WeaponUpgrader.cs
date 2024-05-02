@@ -39,7 +39,7 @@ public class WeaponUpgrader : MonoBehaviour
         {
             if (!col.gameObject.CompareTag("Player")) return;
             _playerWeapon = col.GetComponent<WeaponHandler>();
-            _playerWeapon.Upgraded = true;
+            _playerWeapon.UpgradeInt = 1;
             if (Particle != null)
             {
                 Instantiate(Particle, transform.position, Quaternion.identity);
